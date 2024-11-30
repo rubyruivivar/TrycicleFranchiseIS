@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class UserControl9
+Partial Class UserControl10
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
@@ -22,33 +22,33 @@ Partial Class UserControl9
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DataGridView1 = New DataGridView()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        DataGridView2 = New DataGridView()
+        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' DataGridView1
+        ' DataGridView2
         ' 
-        DataGridView1.AllowUserToAddRows = False
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Dock = DockStyle.Fill
-        DataGridView1.Location = New Point(0, 0)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.ReadOnly = True
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(795, 532)
-        DataGridView1.TabIndex = 0
+        DataGridView2.AllowUserToAddRows = False
+        DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView2.Dock = DockStyle.Fill
+        DataGridView2.Location = New Point(0, 0)
+        DataGridView2.Name = "DataGridView2"
+        DataGridView2.ReadOnly = True
+        DataGridView2.RowHeadersWidth = 51
+        DataGridView2.Size = New Size(795, 532)
+        DataGridView2.TabIndex = 0
         ' 
-        ' UserControl9
+        ' UserControl10
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        Controls.Add(DataGridView1)
-        Name = "UserControl9"
+        Controls.Add(DataGridView2)
+        Name = "UserControl10"
         Size = New Size(795, 532)
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridView2 As DataGridView
 
 End Class

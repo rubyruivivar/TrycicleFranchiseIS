@@ -1,5 +1,6 @@
 ﻿Public Class RenewalData
     Dim recordCount As Integer = 0
+    Dim searchQuery As String = ""
 
     ' Refresh Renewal DataGridView
     Private Sub RefreshRenewalData()
@@ -8,7 +9,8 @@
                                   "`submission_date` AS 'Submission Date', `processing_date` AS 'Processing Date', `approval_date` AS 'Approval Date', " &
                                   "`expiration_date` AS 'Expiration Date', `renewal_type` AS 'Renewal Type', `compliance_status` AS 'Compliance Status', " &
                                   "`status` AS 'Status', `renewal_number` AS 'Renewal Number', `renewal_fee` AS 'Renewal Fee', `penalty_fee` AS 'Penalty Fee', " &
-                                  "`fee_paid` AS 'Fee Paid', `authority_id` AS 'Authority ID' FROM renewaldatabase"
+                                  "`fee_paid` AS 'Fee Paid', `authority_id` AS 'Authority ID' FROM renewaldatabase " & searchQuery
+
             recordCount = RenewalDatabaseModule.LoadToDGV(query, dgvRenewal)
             lblRecordCount.Text = "Total Records: " & recordCount
         Catch ex As Exception
@@ -25,6 +27,38 @@
         SetComboBoxPlaceholder(cbxComplianceStatus, "Compliance Status")
         SetComboBoxPlaceholder(cbxStatus, "Status")
 
+        RefreshRenewalData()
+    End Sub
+
+    ' Search Bar KeyPress Event
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        ' Update search query to filter by the input text across multiple fields
+        searchQuery = "WHERE `renewal_id` LIKE '%" & txtSearch.Text & "%' OR `franchise_id` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `franchisee_id` LIKE '%" & txtSearch.Text & "%' OR `submission_date` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `processing_date` LIKE '%" & txtSearch.Text & "%' OR `approval_date` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `expiration_date` LIKE '%" & txtSearch.Text & "%' OR `renewal_type` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `compliance_status` LIKE '%" & txtSearch.Text & "%' OR `status` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `renewal_number` LIKE '%" & txtSearch.Text & "%' OR `renewal_fee` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `penalty_fee` LIKE '%" & txtSearch.Text & "%' OR `fee_paid` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `authority_id` LIKE '%" & txtSearch.Text & "%'"
+
+        ' Refresh the DataGridView with filtered data
+        RefreshRenewalData()
+    End Sub
+
+    ' Button Click for Search
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        ' Same logic can be applied if a dedicated search button is used
+        searchQuery = "WHERE `renewal_id` LIKE '%" & txtSearch.Text & "%' OR `franchise_id` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `franchisee_id` LIKE '%" & txtSearch.Text & "%' OR `submission_date` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `processing_date` LIKE '%" & txtSearch.Text & "%' OR `approval_date` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `expiration_date` LIKE '%" & txtSearch.Text & "%' OR `renewal_type` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `compliance_status` LIKE '%" & txtSearch.Text & "%' OR `status` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `renewal_number` LIKE '%" & txtSearch.Text & "%' OR `renewal_fee` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `penalty_fee` LIKE '%" & txtSearch.Text & "%' OR `fee_paid` LIKE '%" & txtSearch.Text & "%' " &
+                  "OR `authority_id` LIKE '%" & txtSearch.Text & "%'"
+
+        ' Refresh the DataGridView with filtered data
         RefreshRenewalData()
     End Sub
 
@@ -147,7 +181,6 @@
     End Sub
 
     ' Delete Button Click
-    ' Delete Button Click
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Try
             ' Check if a record is selected
@@ -158,11 +191,11 @@
 
             ' Confirmation message
             If MsgBox("Are you sure you want to delete record with Renewal ID: " & txtFranchiseID.Tag &
-                  " belonging to Franchisee ID: " & txtFranchiseeID.Text & "?",
-                  MsgBoxStyle.YesNo, "Delete Record") = MsgBoxResult.Yes Then
+                      " belonging to Franchisee ID: " & txtFranchiseeID.Text & "?",
+                      MsgBoxStyle.YesNo, "Delete Record") = MsgBoxResult.Yes Then
 
                 ' Delete query
-                Dim query As String = String.Format("DELETE FROM renewaldatabase WHERE renewal_id='{0}'", txtFranchiseID.Tag)
+                Dim query = String.Format("DELETE FROM renewaldatabase WHERE renewal_id='{0}'", txtFranchiseID.Tag)
 
                 ' Execute the query
                 ' RenewalDatabaseModule.ExecuteNonQuery(query)
@@ -182,33 +215,30 @@
         End Try
     End Sub
 
-
     ' DataGridView CellDoubleClick Event
     Private Sub dgvRenewal_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRenewal.CellDoubleClick
         Try
-            If e.RowIndex >= 0 Then
-                ' Set fields from selected row
-                txtFranchiseID.Tag = dgvRenewal.Rows(e.RowIndex).Cells(0).Value.ToString()
-                txtFranchiseID.Text = dgvRenewal.Rows(e.RowIndex).Cells(1).Value.ToString()
-                txtFranchiseeID.Text = dgvRenewal.Rows(e.RowIndex).Cells(2).Value.ToString()
-                dtpSubmissionDate.Value = DateTime.Parse(dgvRenewal.Rows(e.RowIndex).Cells(3).Value.ToString())
-                dtpProcessingDate.Value = DateTime.Parse(dgvRenewal.Rows(e.RowIndex).Cells(4).Value.ToString())
-                dtpApprovalDate.Value = DateTime.Parse(dgvRenewal.Rows(e.RowIndex).Cells(5).Value.ToString())
-                dtpExpirationDate.Value = DateTime.Parse(dgvRenewal.Rows(e.RowIndex).Cells(6).Value.ToString())
-                cbxRenewalType.Text = dgvRenewal.Rows(e.RowIndex).Cells(7).Value.ToString()
-                cbxComplianceStatus.Text = dgvRenewal.Rows(e.RowIndex).Cells(8).Value.ToString()
-                cbxStatus.Text = dgvRenewal.Rows(e.RowIndex).Cells(9).Value.ToString()
-                txtRenewalNumber.Text = dgvRenewal.Rows(e.RowIndex).Cells(10).Value.ToString()
-                txtRenewalFee.Text = dgvRenewal.Rows(e.RowIndex).Cells(11).Value.ToString()
-                txtPenaltyFee.Text = dgvRenewal.Rows(e.RowIndex).Cells(12).Value.ToString()
-                txtAuthorityID.Text = dgvRenewal.Rows(e.RowIndex).Cells(14).Value.ToString()
-            End If
+            Dim row As DataGridViewRow = dgvRenewal.Rows(e.RowIndex)
+            txtFranchiseID.Tag = row.Cells("Renewal ID").Value
+            txtFranchiseID.Text = row.Cells("Franchise ID").Value.ToString()
+            txtFranchiseeID.Text = row.Cells("Franchisee ID").Value.ToString()
+            txtRenewalNumber.Text = row.Cells("Renewal Number").Value.ToString()
+            txtRenewalFee.Text = row.Cells("Renewal Fee").Value.ToString()
+            txtPenaltyFee.Text = row.Cells("Penalty Fee").Value.ToString()
+            txtAuthorityID.Text = row.Cells("Authority ID").Value.ToString()
+            cbxRenewalType.Text = row.Cells("Renewal Type").Value.ToString()
+            cbxComplianceStatus.Text = row.Cells("Compliance Status").Value.ToString()
+            cbxStatus.Text = row.Cells("Status").Value.ToString()
+            dtpSubmissionDate.Value = DateTime.Parse(row.Cells("Submission Date").Value.ToString())
+            dtpProcessingDate.Value = DateTime.Parse(row.Cells("Processing Date").Value.ToString())
+            dtpApprovalDate.Value = DateTime.Parse(row.Cells("Approval Date").Value.ToString())
+            dtpExpirationDate.Value = DateTime.Parse(row.Cells("Expiration Date").Value.ToString())
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical)
         End Try
     End Sub
 
-    ' Clear form fields after successful save
+    ' Clear Form Fields
     Private Sub ClearFormFields()
         txtFranchiseID.Clear()
         txtFranchiseeID.Clear()
@@ -216,14 +246,12 @@
         txtRenewalFee.Clear()
         txtPenaltyFee.Clear()
         txtAuthorityID.Clear()
-
-        cbxRenewalType.Text = "Renewal Type"
-        cbxComplianceStatus.Text = "Compliance Status"
-        cbxStatus.Text = "Status"
-        cbxRenewalType.ForeColor = Color.Gray
-        cbxComplianceStatus.ForeColor = Color.Gray
-        cbxStatus.ForeColor = Color.Gray
-
+        cbxRenewalType.SelectedIndex = -1
+        cbxComplianceStatus.SelectedIndex = -1
+        cbxStatus.SelectedIndex = -1
+        dtpSubmissionDate.Value = DateTime.Now
+        dtpProcessingDate.Value = DateTime.Now
+        dtpApprovalDate.Value = DateTime.Now
+        dtpExpirationDate.Value = DateTime.Now
     End Sub
-
 End Class

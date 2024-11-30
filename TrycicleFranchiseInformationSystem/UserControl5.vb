@@ -103,7 +103,8 @@ Public Class Form5Renewal
                                                 txtAuthorityID.Text.Trim)
 
             ' Execute the query using the module method
-            RenewalDatabaseModule.ExecuteNonQuery(query)
+            ' RenewalDatabaseModule.ExecuteNonQuery(query)
+            modDB.readQuery(query)
 
             MsgBox("New renewal record saved successfully!", MsgBoxStyle.Information)
 

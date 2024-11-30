@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class UserControl9
+Partial Class UserControl11
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
@@ -38,12 +38,12 @@ Partial Class UserControl9
         DataGridView1.Size = New Size(795, 532)
         DataGridView1.TabIndex = 0
         ' 
-        ' UserControl9
+        ' UserControl11
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(DataGridView1)
-        Name = "UserControl9"
+        Name = "UserControl11"
         Size = New Size(795, 532)
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
