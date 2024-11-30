@@ -11,7 +11,7 @@
                                   "`status` AS 'Status', `renewal_number` AS 'Renewal Number', `renewal_fee` AS 'Renewal Fee', `penalty_fee` AS 'Penalty Fee', " &
                                   "`fee_paid` AS 'Fee Paid', `authority_id` AS 'Authority ID' FROM renewaldatabase " & searchQuery
 
-            recordCount = RenewalDatabaseModule.LoadToDGV(query, dgvRenewal)
+            recordCount = modDB.LoadToDGV(query, dgvRenewal)
             lblRecordCount.Text = "Total Records: " & recordCount
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical)
