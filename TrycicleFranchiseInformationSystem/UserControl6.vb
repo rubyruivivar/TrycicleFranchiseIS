@@ -1,13 +1,5 @@
 ﻿Public Class Form4regulatory
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TextBox12_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TextBox13_TextChanged(sender As Object, e As EventArgs)
-
+    Private Sub Form4regulatory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Dock = DockStyle.Fill
     End Sub
 End Class

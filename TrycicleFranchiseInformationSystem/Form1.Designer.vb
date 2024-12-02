@@ -79,8 +79,9 @@ Partial Class Form1
         PanelDashboard.Controls.Add(Panel1)
         PanelDashboard.Dock = DockStyle.Left
         PanelDashboard.Location = New Point(0, 0)
+        PanelDashboard.Margin = New Padding(3, 2, 3, 2)
         PanelDashboard.Name = "PanelDashboard"
-        PanelDashboard.Size = New Size(282, 902)
+        PanelDashboard.Size = New Size(247, 562)
         PanelDashboard.TabIndex = 0
         ' 
         ' ReportsSubpanel
@@ -98,9 +99,10 @@ Partial Class Form1
         ReportsSubpanel.Controls.Add(Button10)
         ReportsSubpanel.Controls.Add(Button11)
         ReportsSubpanel.Dock = DockStyle.Top
-        ReportsSubpanel.Location = New Point(0, 541)
+        ReportsSubpanel.Location = New Point(0, 407)
+        ReportsSubpanel.Margin = New Padding(3, 2, 3, 2)
         ReportsSubpanel.Name = "ReportsSubpanel"
-        ReportsSubpanel.Size = New Size(282, 247)
+        ReportsSubpanel.Size = New Size(230, 185)
         ReportsSubpanel.TabIndex = 11
         ReportsSubpanel.Visible = False
         ' 
@@ -114,10 +116,11 @@ Partial Class Form1
         Button16.FlatStyle = FlatStyle.Flat
         Button16.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button16.ForeColor = SystemColors.ButtonHighlight
-        Button16.Location = New Point(0, 283)
+        Button16.Location = New Point(0, 212)
+        Button16.Margin = New Padding(3, 2, 3, 2)
         Button16.Name = "Button16"
-        Button16.Padding = New Padding(35, 0, 0, 0)
-        Button16.Size = New Size(261, 31)
+        Button16.Padding = New Padding(31, 0, 0, 0)
+        Button16.Size = New Size(213, 23)
         Button16.TabIndex = 9
         Button16.Text = "Franchise Tracking"
         Button16.TextAlign = ContentAlignment.MiddleLeft
@@ -133,10 +136,11 @@ Partial Class Form1
         Button15.FlatStyle = FlatStyle.Flat
         Button15.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button15.ForeColor = SystemColors.ButtonHighlight
-        Button15.Location = New Point(0, 252)
+        Button15.Location = New Point(0, 189)
+        Button15.Margin = New Padding(3, 2, 3, 2)
         Button15.Name = "Button15"
-        Button15.Padding = New Padding(35, 0, 0, 0)
-        Button15.Size = New Size(261, 31)
+        Button15.Padding = New Padding(31, 0, 0, 0)
+        Button15.Size = New Size(213, 23)
         Button15.TabIndex = 8
         Button15.Text = "Incident Report"
         Button15.TextAlign = ContentAlignment.MiddleLeft
@@ -152,10 +156,11 @@ Partial Class Form1
         Button14.FlatStyle = FlatStyle.Flat
         Button14.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button14.ForeColor = SystemColors.ButtonHighlight
-        Button14.Location = New Point(0, 221)
+        Button14.Location = New Point(0, 166)
+        Button14.Margin = New Padding(3, 2, 3, 2)
         Button14.Name = "Button14"
-        Button14.Padding = New Padding(35, 0, 0, 0)
-        Button14.Size = New Size(261, 31)
+        Button14.Padding = New Padding(31, 0, 0, 0)
+        Button14.Size = New Size(213, 23)
         Button14.TabIndex = 7
         Button14.Text = "Franchise Performance"
         Button14.TextAlign = ContentAlignment.MiddleLeft
@@ -171,10 +176,11 @@ Partial Class Form1
         Button13.FlatStyle = FlatStyle.Flat
         Button13.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button13.ForeColor = SystemColors.ButtonHighlight
-        Button13.Location = New Point(0, 190)
+        Button13.Location = New Point(0, 143)
+        Button13.Margin = New Padding(3, 2, 3, 2)
         Button13.Name = "Button13"
-        Button13.Padding = New Padding(35, 0, 0, 0)
-        Button13.Size = New Size(261, 31)
+        Button13.Padding = New Padding(31, 0, 0, 0)
+        Button13.Size = New Size(213, 23)
         Button13.TabIndex = 6
         Button13.Text = "Franchise Revenue"
         Button13.TextAlign = ContentAlignment.MiddleLeft
@@ -190,10 +196,11 @@ Partial Class Form1
         Button12.FlatStyle = FlatStyle.Flat
         Button12.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button12.ForeColor = SystemColors.ButtonHighlight
-        Button12.Location = New Point(0, 159)
+        Button12.Location = New Point(0, 120)
+        Button12.Margin = New Padding(3, 2, 3, 2)
         Button12.Name = "Button12"
-        Button12.Padding = New Padding(35, 0, 0, 0)
-        Button12.Size = New Size(261, 31)
+        Button12.Padding = New Padding(31, 0, 0, 0)
+        Button12.Size = New Size(213, 23)
         Button12.TabIndex = 5
         Button12.Text = "Identification Issuance"
         Button12.TextAlign = ContentAlignment.MiddleLeft
@@ -209,10 +216,11 @@ Partial Class Form1
         Button7.FlatStyle = FlatStyle.Flat
         Button7.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button7.ForeColor = SystemColors.ButtonHighlight
-        Button7.Location = New Point(0, 128)
+        Button7.Location = New Point(0, 97)
+        Button7.Margin = New Padding(3, 2, 3, 2)
         Button7.Name = "Button7"
-        Button7.Padding = New Padding(35, 0, 0, 0)
-        Button7.Size = New Size(261, 31)
+        Button7.Padding = New Padding(31, 0, 0, 0)
+        Button7.Size = New Size(213, 23)
         Button7.TabIndex = 4
         Button7.Text = "Vehicle Ownership Report"
         Button7.TextAlign = ContentAlignment.MiddleLeft
@@ -228,10 +236,11 @@ Partial Class Form1
         Button8.FlatStyle = FlatStyle.Flat
         Button8.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button8.ForeColor = SystemColors.ButtonHighlight
-        Button8.Location = New Point(0, 99)
+        Button8.Location = New Point(0, 75)
+        Button8.Margin = New Padding(3, 2, 3, 2)
         Button8.Name = "Button8"
-        Button8.Padding = New Padding(35, 0, 0, 0)
-        Button8.Size = New Size(261, 29)
+        Button8.Padding = New Padding(31, 0, 0, 0)
+        Button8.Size = New Size(213, 22)
         Button8.TabIndex = 3
         Button8.Text = "Regulatory Compliance Report"
         Button8.TextAlign = ContentAlignment.MiddleLeft
@@ -247,10 +256,11 @@ Partial Class Form1
         Button9.FlatStyle = FlatStyle.Flat
         Button9.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button9.ForeColor = SystemColors.ButtonHighlight
-        Button9.Location = New Point(0, 70)
+        Button9.Location = New Point(0, 53)
+        Button9.Margin = New Padding(3, 2, 3, 2)
         Button9.Name = "Button9"
-        Button9.Padding = New Padding(35, 0, 0, 0)
-        Button9.Size = New Size(261, 29)
+        Button9.Padding = New Padding(31, 0, 0, 0)
+        Button9.Size = New Size(213, 22)
         Button9.TabIndex = 2
         Button9.Text = "Renewal Status Report"
         Button9.TextAlign = ContentAlignment.MiddleLeft
@@ -266,10 +276,11 @@ Partial Class Form1
         Button10.FlatStyle = FlatStyle.Flat
         Button10.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button10.ForeColor = SystemColors.ButtonHighlight
-        Button10.Location = New Point(0, 41)
+        Button10.Location = New Point(0, 31)
+        Button10.Margin = New Padding(3, 2, 3, 2)
         Button10.Name = "Button10"
-        Button10.Padding = New Padding(35, 0, 0, 0)
-        Button10.Size = New Size(261, 29)
+        Button10.Padding = New Padding(31, 0, 0, 0)
+        Button10.Size = New Size(213, 22)
         Button10.TabIndex = 1
         Button10.Text = "Active Franchise Report"
         Button10.TextAlign = ContentAlignment.MiddleLeft
@@ -286,9 +297,10 @@ Partial Class Form1
         Button11.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button11.ForeColor = SystemColors.ButtonHighlight
         Button11.Location = New Point(0, 0)
+        Button11.Margin = New Padding(3, 2, 3, 2)
         Button11.Name = "Button11"
-        Button11.Padding = New Padding(35, 0, 0, 0)
-        Button11.Size = New Size(261, 41)
+        Button11.Padding = New Padding(31, 0, 0, 0)
+        Button11.Size = New Size(213, 31)
         Button11.TabIndex = 0
         Button11.Text = "New Franchisee Report"
         Button11.TextAlign = ContentAlignment.MiddleLeft
@@ -303,14 +315,15 @@ Partial Class Form1
         BtnLogout.FlatAppearance.MouseDownBackColor = Color.DimGray
         BtnLogout.FlatAppearance.MouseOverBackColor = Color.DimGray
         BtnLogout.FlatStyle = FlatStyle.Flat
-        BtnLogout.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BtnLogout.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnLogout.ForeColor = SystemColors.ButtonHighlight
         BtnLogout.Image = My.Resources.Resources.Log_Out__1_
         BtnLogout.ImageAlign = ContentAlignment.MiddleLeft
-        BtnLogout.Location = New Point(0, 840)
+        BtnLogout.Location = New Point(0, 592)
+        BtnLogout.Margin = New Padding(3, 2, 3, 2)
         BtnLogout.Name = "BtnLogout"
-        BtnLogout.Padding = New Padding(10, 0, 0, 0)
-        BtnLogout.Size = New Size(282, 62)
+        BtnLogout.Padding = New Padding(9, 0, 0, 0)
+        BtnLogout.Size = New Size(230, 46)
         BtnLogout.TabIndex = 10
         BtnLogout.Text = "Log-out"
         BtnLogout.UseVisualStyleBackColor = False
@@ -324,14 +337,15 @@ Partial Class Form1
         BtnReports.FlatAppearance.MouseDownBackColor = Color.DimGray
         BtnReports.FlatAppearance.MouseOverBackColor = Color.DimGray
         BtnReports.FlatStyle = FlatStyle.Flat
-        BtnReports.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BtnReports.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnReports.ForeColor = SystemColors.ButtonHighlight
         BtnReports.Image = My.Resources.Resources.Reports__1_
         BtnReports.ImageAlign = ContentAlignment.MiddleLeft
-        BtnReports.Location = New Point(0, 467)
+        BtnReports.Location = New Point(0, 351)
+        BtnReports.Margin = New Padding(3, 2, 3, 2)
         BtnReports.Name = "BtnReports"
-        BtnReports.Padding = New Padding(10, 0, 0, 0)
-        BtnReports.Size = New Size(282, 74)
+        BtnReports.Padding = New Padding(9, 0, 0, 0)
+        BtnReports.Size = New Size(230, 56)
         BtnReports.TabIndex = 9
         BtnReports.Text = "Reports"
         BtnReports.UseVisualStyleBackColor = False
@@ -346,9 +360,10 @@ Partial Class Form1
         Submenupanel.Controls.Add(Button3)
         Submenupanel.Controls.Add(Button2)
         Submenupanel.Dock = DockStyle.Top
-        Submenupanel.Location = New Point(0, 318)
+        Submenupanel.Location = New Point(0, 239)
+        Submenupanel.Margin = New Padding(3, 2, 3, 2)
         Submenupanel.Name = "Submenupanel"
-        Submenupanel.Size = New Size(282, 149)
+        Submenupanel.Size = New Size(230, 112)
         Submenupanel.TabIndex = 8
         Submenupanel.Visible = False
         ' 
@@ -362,10 +377,11 @@ Partial Class Form1
         Button6.FlatStyle = FlatStyle.Flat
         Button6.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button6.ForeColor = SystemColors.ButtonHighlight
-        Button6.Location = New Point(0, 117)
+        Button6.Location = New Point(0, 88)
+        Button6.Margin = New Padding(3, 2, 3, 2)
         Button6.Name = "Button6"
-        Button6.Padding = New Padding(35, 0, 0, 0)
-        Button6.Size = New Size(282, 31)
+        Button6.Padding = New Padding(31, 0, 0, 0)
+        Button6.Size = New Size(230, 23)
         Button6.TabIndex = 4
         Button6.Text = "Franchise Renewal"
         Button6.TextAlign = ContentAlignment.MiddleLeft
@@ -381,10 +397,11 @@ Partial Class Form1
         Button5.FlatStyle = FlatStyle.Flat
         Button5.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button5.ForeColor = SystemColors.ButtonHighlight
-        Button5.Location = New Point(0, 88)
+        Button5.Location = New Point(0, 66)
+        Button5.Margin = New Padding(3, 2, 3, 2)
         Button5.Name = "Button5"
-        Button5.Padding = New Padding(35, 0, 0, 0)
-        Button5.Size = New Size(282, 29)
+        Button5.Padding = New Padding(31, 0, 0, 0)
+        Button5.Size = New Size(230, 22)
         Button5.TabIndex = 3
         Button5.Text = "Regulatory Authority"
         Button5.TextAlign = ContentAlignment.MiddleLeft
@@ -400,10 +417,11 @@ Partial Class Form1
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = SystemColors.ButtonHighlight
-        Button4.Location = New Point(0, 59)
+        Button4.Location = New Point(0, 44)
+        Button4.Margin = New Padding(3, 2, 3, 2)
         Button4.Name = "Button4"
-        Button4.Padding = New Padding(35, 0, 0, 0)
-        Button4.Size = New Size(282, 29)
+        Button4.Padding = New Padding(31, 0, 0, 0)
+        Button4.Size = New Size(230, 22)
         Button4.TabIndex = 2
         Button4.Text = "Vehicle"
         Button4.TextAlign = ContentAlignment.MiddleLeft
@@ -419,10 +437,11 @@ Partial Class Form1
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = SystemColors.ButtonHighlight
-        Button3.Location = New Point(0, 30)
+        Button3.Location = New Point(0, 22)
+        Button3.Margin = New Padding(3, 2, 3, 2)
         Button3.Name = "Button3"
-        Button3.Padding = New Padding(35, 0, 0, 0)
-        Button3.Size = New Size(282, 29)
+        Button3.Padding = New Padding(31, 0, 0, 0)
+        Button3.Size = New Size(230, 22)
         Button3.TabIndex = 1
         Button3.Text = "List of Franchisee"
         Button3.TextAlign = ContentAlignment.MiddleLeft
@@ -439,9 +458,10 @@ Partial Class Form1
         Button2.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = SystemColors.ButtonHighlight
         Button2.Location = New Point(0, 0)
+        Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
-        Button2.Padding = New Padding(35, 0, 0, 0)
-        Button2.Size = New Size(282, 30)
+        Button2.Padding = New Padding(31, 0, 0, 0)
+        Button2.Size = New Size(230, 22)
         Button2.TabIndex = 0
         Button2.Text = "New Entry Form"
         Button2.TextAlign = ContentAlignment.MiddleLeft
@@ -456,14 +476,15 @@ Partial Class Form1
         ButtonMenu.FlatAppearance.MouseDownBackColor = Color.Gray
         ButtonMenu.FlatAppearance.MouseOverBackColor = Color.Gray
         ButtonMenu.FlatStyle = FlatStyle.Flat
-        ButtonMenu.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ButtonMenu.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ButtonMenu.ForeColor = SystemColors.ButtonHighlight
         ButtonMenu.Image = CType(resources.GetObject("ButtonMenu.Image"), Image)
         ButtonMenu.ImageAlign = ContentAlignment.MiddleLeft
-        ButtonMenu.Location = New Point(0, 257)
+        ButtonMenu.Location = New Point(0, 193)
+        ButtonMenu.Margin = New Padding(3, 2, 3, 2)
         ButtonMenu.Name = "ButtonMenu"
-        ButtonMenu.Padding = New Padding(10, 0, 0, 0)
-        ButtonMenu.Size = New Size(282, 61)
+        ButtonMenu.Padding = New Padding(9, 0, 0, 0)
+        ButtonMenu.Size = New Size(230, 46)
         ButtonMenu.TabIndex = 7
         ButtonMenu.Text = "Menu"
         ButtonMenu.UseVisualStyleBackColor = False
@@ -477,14 +498,15 @@ Partial Class Form1
         BtnDashboard.FlatAppearance.MouseDownBackColor = Color.Gray
         BtnDashboard.FlatAppearance.MouseOverBackColor = Color.Gray
         BtnDashboard.FlatStyle = FlatStyle.Flat
-        BtnDashboard.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BtnDashboard.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnDashboard.ForeColor = SystemColors.ButtonHighlight
         BtnDashboard.Image = My.Resources.Resources.Vector
         BtnDashboard.ImageAlign = ContentAlignment.MiddleLeft
-        BtnDashboard.Location = New Point(0, 189)
+        BtnDashboard.Location = New Point(0, 142)
+        BtnDashboard.Margin = New Padding(3, 2, 3, 2)
         BtnDashboard.Name = "BtnDashboard"
-        BtnDashboard.Padding = New Padding(10, 0, 0, 0)
-        BtnDashboard.Size = New Size(282, 68)
+        BtnDashboard.Padding = New Padding(9, 0, 0, 0)
+        BtnDashboard.Size = New Size(230, 51)
         BtnDashboard.TabIndex = 5
         BtnDashboard.Text = "Dashboard"
         BtnDashboard.UseVisualStyleBackColor = False
@@ -495,8 +517,9 @@ Partial Class Form1
         Panel1.Controls.Add(PictureBox1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(282, 189)
+        Panel1.Size = New Size(230, 142)
         Panel1.TabIndex = 4
         ' 
         ' PictureBox1
@@ -504,8 +527,9 @@ Partial Class Form1
         PictureBox1.BackColor = Color.LightCoral
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
         PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(282, 189)
+        PictureBox1.Size = New Size(247, 142)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -534,9 +558,10 @@ Partial Class Form1
         Panel3.Controls.Add(BtnFullScreen)
         Panel3.Controls.Add(Button1)
         Panel3.Dock = DockStyle.Top
-        Panel3.Location = New Point(282, 0)
+        Panel3.Location = New Point(247, 0)
+        Panel3.Margin = New Padding(3, 2, 3, 2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(650, 38)
+        Panel3.Size = New Size(570, 40)
         Panel3.TabIndex = 2
         ' 
         ' BtnFullScreen
@@ -546,9 +571,10 @@ Partial Class Form1
         BtnFullScreen.FlatStyle = FlatStyle.Flat
         BtnFullScreen.ForeColor = SystemColors.ActiveCaptionText
         BtnFullScreen.Image = My.Resources.Resources.Full_Screen
-        BtnFullScreen.Location = New Point(377, 0)
+        BtnFullScreen.Location = New Point(332, 0)
+        BtnFullScreen.Margin = New Padding(3, 2, 3, 2)
         BtnFullScreen.Name = "BtnFullScreen"
-        BtnFullScreen.Size = New Size(53, 38)
+        BtnFullScreen.Size = New Size(46, 40)
         BtnFullScreen.TabIndex = 1
         BtnFullScreen.UseVisualStyleBackColor = False
         ' 
@@ -559,13 +585,14 @@ Partial Class Form1
         Button1.FlatAppearance.BorderColor = Color.Black
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = SystemColors.ButtonHighlight
         Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
         Button1.ImageAlign = ContentAlignment.TopLeft
-        Button1.Location = New Point(430, 0)
+        Button1.Location = New Point(378, 0)
+        Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
-        Button1.Size = New Size(220, 38)
+        Button1.Size = New Size(192, 40)
         Button1.TabIndex = 0
         Button1.Text = "Admin Harley"
         Button1.UseVisualStyleBackColor = False
@@ -576,32 +603,35 @@ Partial Class Form1
         Panel2.BackgroundImageLayout = ImageLayout.Center
         Panel2.Controls.Add(PictureBox2)
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(282, 38)
+        Panel2.Location = New Point(247, 40)
+        Panel2.Margin = New Padding(3, 2, 3, 2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(650, 864)
+        Panel2.Size = New Size(570, 522)
         Panel2.TabIndex = 3
         ' 
         ' PictureBox2
         ' 
         PictureBox2.Anchor = AnchorStyles.None
         PictureBox2.Image = My.Resources.Resources._22c4b23f_2706_4e11_bf6e_07bc0e18684b_removebg_preview
-        PictureBox2.Location = New Point(102, 86)
+        PictureBox2.Location = New Point(92, 10)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(446, 398)
+        PictureBox2.Size = New Size(390, 298)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 0
         PictureBox2.TabStop = False
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LavenderBlush
-        ClientSize = New Size(932, 902)
+        ClientSize = New Size(817, 562)
         Controls.Add(Panel2)
         Controls.Add(Panel3)
         Controls.Add(PanelDashboard)
-        MinimumSize = New Size(950, 600)
+        Margin = New Padding(3, 2, 3, 2)
+        MinimumSize = New Size(833, 460)
         Name = "Form1"
         Text = "Form 1-Home"
         PanelDashboard.ResumeLayout(False)

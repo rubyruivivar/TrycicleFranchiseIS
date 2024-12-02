@@ -44,114 +44,128 @@ Partial Class Form3vehicle
         ' 
         ' tbcolor
         ' 
-        tbcolor.Location = New Point(41, 243)
+        tbcolor.Location = New Point(36, 182)
+        tbcolor.Margin = New Padding(3, 2, 3, 2)
         tbcolor.Name = "tbcolor"
         tbcolor.PlaceholderText = "Color"
-        tbcolor.Size = New Size(278, 27)
+        tbcolor.Size = New Size(244, 23)
         tbcolor.TabIndex = 30
         ' 
         ' tbyear_of_manufacture
         ' 
-        tbyear_of_manufacture.Location = New Point(41, 276)
+        tbyear_of_manufacture.Location = New Point(36, 207)
+        tbyear_of_manufacture.Margin = New Padding(3, 2, 3, 2)
         tbyear_of_manufacture.Name = "tbyear_of_manufacture"
         tbyear_of_manufacture.PlaceholderText = "Year Manufactured"
-        tbyear_of_manufacture.Size = New Size(278, 27)
+        tbyear_of_manufacture.Size = New Size(244, 23)
         tbyear_of_manufacture.TabIndex = 29
         ' 
         ' tbfranchise_id
         ' 
-        tbfranchise_id.Location = New Point(41, 309)
+        tbfranchise_id.Location = New Point(36, 232)
+        tbfranchise_id.Margin = New Padding(3, 2, 3, 2)
         tbfranchise_id.Name = "tbfranchise_id"
         tbfranchise_id.PlaceholderText = "Franchise ID"
-        tbfranchise_id.Size = New Size(278, 27)
+        tbfranchise_id.Size = New Size(244, 23)
         tbfranchise_id.TabIndex = 28
         ' 
         ' tb_net_weight
         ' 
-        tb_net_weight.Location = New Point(357, 342)
+        tb_net_weight.Location = New Point(312, 256)
+        tb_net_weight.Margin = New Padding(3, 2, 3, 2)
         tb_net_weight.Name = "tb_net_weight"
         tb_net_weight.PlaceholderText = "Net Weight"
-        tb_net_weight.Size = New Size(278, 27)
+        tb_net_weight.Size = New Size(244, 23)
         tb_net_weight.TabIndex = 27
         ' 
         ' tbmileage
         ' 
-        tbmileage.Location = New Point(357, 309)
+        tbmileage.Location = New Point(312, 232)
+        tbmileage.Margin = New Padding(3, 2, 3, 2)
         tbmileage.Name = "tbmileage"
         tbmileage.PlaceholderText = "Mileage"
-        tbmileage.Size = New Size(278, 27)
+        tbmileage.Size = New Size(244, 23)
         tbmileage.TabIndex = 26
         ' 
         ' tb_engine_num
         ' 
-        tb_engine_num.Location = New Point(357, 210)
+        tb_engine_num.Location = New Point(312, 158)
+        tb_engine_num.Margin = New Padding(3, 2, 3, 2)
         tb_engine_num.Name = "tb_engine_num"
         tb_engine_num.PlaceholderText = "Engine Number"
-        tb_engine_num.Size = New Size(278, 27)
+        tb_engine_num.Size = New Size(244, 23)
         tb_engine_num.TabIndex = 25
         ' 
         ' tb_purchase_date
         ' 
-        tb_purchase_date.Location = New Point(357, 276)
+        tb_purchase_date.Location = New Point(312, 207)
+        tb_purchase_date.Margin = New Padding(3, 2, 3, 2)
         tb_purchase_date.Name = "tb_purchase_date"
         tb_purchase_date.PlaceholderText = "Purchase Date"
-        tb_purchase_date.Size = New Size(278, 27)
+        tb_purchase_date.Size = New Size(244, 23)
         tb_purchase_date.TabIndex = 24
         ' 
         ' tbtransmission_type
         ' 
-        tbtransmission_type.Location = New Point(357, 144)
+        tbtransmission_type.Location = New Point(312, 108)
+        tbtransmission_type.Margin = New Padding(3, 2, 3, 2)
         tbtransmission_type.Name = "tbtransmission_type"
         tbtransmission_type.PlaceholderText = "Transmission Type"
-        tbtransmission_type.Size = New Size(278, 27)
+        tbtransmission_type.Size = New Size(244, 23)
         tbtransmission_type.TabIndex = 23
         ' 
         ' tb_official_receipt
         ' 
-        tb_official_receipt.Location = New Point(357, 243)
+        tb_official_receipt.Location = New Point(312, 182)
+        tb_official_receipt.Margin = New Padding(3, 2, 3, 2)
         tb_official_receipt.Name = "tb_official_receipt"
         tb_official_receipt.PlaceholderText = "Official Receipt"
-        tb_official_receipt.Size = New Size(278, 27)
+        tb_official_receipt.Size = New Size(244, 23)
         tb_official_receipt.TabIndex = 22
         ' 
         ' tb_chassis_num
         ' 
-        tb_chassis_num.Location = New Point(357, 177)
+        tb_chassis_num.Location = New Point(312, 133)
+        tb_chassis_num.Margin = New Padding(3, 2, 3, 2)
         tb_chassis_num.Name = "tb_chassis_num"
         tb_chassis_num.PlaceholderText = "Chassis Number"
-        tb_chassis_num.Size = New Size(278, 27)
+        tb_chassis_num.Size = New Size(244, 23)
         tb_chassis_num.TabIndex = 21
         ' 
         ' tbfuel_type
         ' 
-        tbfuel_type.Location = New Point(41, 342)
+        tbfuel_type.Location = New Point(36, 256)
+        tbfuel_type.Margin = New Padding(3, 2, 3, 2)
         tbfuel_type.Name = "tbfuel_type"
         tbfuel_type.PlaceholderText = "Fuel Type"
-        tbfuel_type.Size = New Size(278, 27)
+        tbfuel_type.Size = New Size(244, 23)
         tbfuel_type.TabIndex = 20
         ' 
         ' tbmodel
         ' 
-        tbmodel.Location = New Point(41, 210)
+        tbmodel.Location = New Point(36, 158)
+        tbmodel.Margin = New Padding(3, 2, 3, 2)
         tbmodel.Name = "tbmodel"
         tbmodel.PlaceholderText = "Model"
-        tbmodel.Size = New Size(278, 27)
+        tbmodel.Size = New Size(244, 23)
         tbmodel.TabIndex = 19
         ' 
         ' tbplate_number
         ' 
-        tbplate_number.Location = New Point(41, 177)
+        tbplate_number.Location = New Point(36, 133)
+        tbplate_number.Margin = New Padding(3, 2, 3, 2)
         tbplate_number.Name = "tbplate_number"
         tbplate_number.PlaceholderText = "Plate Number"
-        tbplate_number.Size = New Size(278, 27)
+        tbplate_number.Size = New Size(244, 23)
         tbplate_number.TabIndex = 18
         ' 
         ' tb_vehicle_id
         ' 
-        tb_vehicle_id.Location = New Point(41, 144)
+        tb_vehicle_id.Location = New Point(36, 108)
+        tb_vehicle_id.Margin = New Padding(3, 2, 3, 2)
         tb_vehicle_id.Name = "tb_vehicle_id"
         tb_vehicle_id.PlaceholderText = "Vehicle ID"
-        tb_vehicle_id.Size = New Size(278, 27)
+        tb_vehicle_id.Size = New Size(244, 23)
         tb_vehicle_id.TabIndex = 17
         ' 
         ' LabelVehicle_Regulatory
@@ -160,9 +174,9 @@ Partial Class Form3vehicle
         LabelVehicle_Regulatory.BackColor = Color.Transparent
         LabelVehicle_Regulatory.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         LabelVehicle_Regulatory.ForeColor = Color.White
-        LabelVehicle_Regulatory.Location = New Point(21, 20)
+        LabelVehicle_Regulatory.Location = New Point(18, 15)
         LabelVehicle_Regulatory.Name = "LabelVehicle_Regulatory"
-        LabelVehicle_Regulatory.Size = New Size(179, 20)
+        LabelVehicle_Regulatory.Size = New Size(139, 15)
         LabelVehicle_Regulatory.TabIndex = 16
         LabelVehicle_Regulatory.Text = "VEHICLE INFORMATION"
         ' 
@@ -175,9 +189,10 @@ Partial Class Form3vehicle
         BtnAdd.FlatStyle = FlatStyle.Flat
         BtnAdd.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnAdd.ForeColor = Color.White
-        BtnAdd.Location = New Point(515, 502)
+        BtnAdd.Location = New Point(431, 319)
+        BtnAdd.Margin = New Padding(3, 2, 3, 2)
         BtnAdd.Name = "BtnAdd"
-        BtnAdd.Size = New Size(143, 38)
+        BtnAdd.Size = New Size(125, 28)
         BtnAdd.TabIndex = 45
         BtnAdd.Text = "Save"
         BtnAdd.UseVisualStyleBackColor = False
@@ -188,13 +203,14 @@ Partial Class Form3vehicle
         Panel1.Controls.Add(LabelVehicle_Regulatory)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(686, 55)
+        Panel1.Size = New Size(600, 41)
         Panel1.TabIndex = 46
         ' 
         ' Form3vehicle
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.RosyBrown
         Controls.Add(Panel1)
@@ -213,8 +229,9 @@ Partial Class Form3vehicle
         Controls.Add(tbmodel)
         Controls.Add(tbplate_number)
         Controls.Add(tb_vehicle_id)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "Form3vehicle"
-        Size = New Size(686, 555)
+        Size = New Size(600, 416)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         ResumeLayout(False)

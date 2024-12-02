@@ -22,218 +22,359 @@ Partial Class Form2franchise
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        tb_franchise_duration = New TextBox()
-        tb_license_number = New TextBox()
-        tb_route = New TextBox()
+        tbFranchiseDuration = New TextBox()
+        tbLicenseNumber = New TextBox()
+        tbRoute = New TextBox()
         tbstatus = New TextBox()
-        tbdate_issued = New TextBox()
-        tb_expiration = New TextBox()
-        tbtotal_violations = New TextBox()
-        tblast_renewal_date = New TextBox()
-        tbfee_paid = New TextBox()
+        tbTotalViolations = New TextBox()
+        tbFeePaid = New TextBox()
         tb_area = New TextBox()
-        tb_association = New TextBox()
-        Label3 = New Label()
-        tbvehicle_id = New TextBox()
+        tbAssociation = New TextBox()
+        tbVehicleID = New TextBox()
         tbfranchise_type = New TextBox()
-        tbfranchise_id = New TextBox()
-        BtnAdd = New Button()
+        btnSave = New Button()
+        tbFranchiseeID = New TextBox()
+        cbxArea = New ComboBox()
+        cbxFranchiseType = New ComboBox()
+        Label1 = New Label()
+        Label2 = New Label()
+        Label5 = New Label()
+        dtpExpirationDate = New DateTimePicker()
+        dtpLastRenewalDate = New DateTimePicker()
+        dtpDateIssued = New DateTimePicker()
+        cbxStatus = New ComboBox()
+        LabelVehicle_Regulatory = New Label()
+        Panel1 = New Panel()
+        btnSearch = New Button()
+        txtSearch = New TextBox()
+        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' tb_franchise_duration
+        ' tbFranchiseDuration
         ' 
-        tb_franchise_duration.Location = New Point(188, 490)
-        tb_franchise_duration.Name = "tb_franchise_duration"
-        tb_franchise_duration.PlaceholderText = "Franchise Duration"
-        tb_franchise_duration.ReadOnly = True
-        tb_franchise_duration.Size = New Size(306, 27)
-        tb_franchise_duration.TabIndex = 43
+        tbFranchiseDuration.Location = New Point(286, 205)
+        tbFranchiseDuration.Margin = New Padding(3, 2, 3, 2)
+        tbFranchiseDuration.Name = "tbFranchiseDuration"
+        tbFranchiseDuration.PlaceholderText = "Franchise Duration"
+        tbFranchiseDuration.ReadOnly = True
+        tbFranchiseDuration.Size = New Size(218, 23)
+        tbFranchiseDuration.TabIndex = 43
         ' 
-        ' tb_license_number
+        ' tbLicenseNumber
         ' 
-        tb_license_number.Location = New Point(188, 457)
-        tb_license_number.Name = "tb_license_number"
-        tb_license_number.PlaceholderText = "License Number"
-        tb_license_number.ReadOnly = True
-        tb_license_number.Size = New Size(306, 27)
-        tb_license_number.TabIndex = 42
+        tbLicenseNumber.Location = New Point(53, 166)
+        tbLicenseNumber.Margin = New Padding(3, 2, 3, 2)
+        tbLicenseNumber.Name = "tbLicenseNumber"
+        tbLicenseNumber.PlaceholderText = "License Number"
+        tbLicenseNumber.ReadOnly = True
+        tbLicenseNumber.Size = New Size(218, 23)
+        tbLicenseNumber.TabIndex = 42
         ' 
-        ' tb_route
+        ' tbRoute
         ' 
-        tb_route.Location = New Point(188, 424)
-        tb_route.Name = "tb_route"
-        tb_route.PlaceholderText = "Route"
-        tb_route.ReadOnly = True
-        tb_route.Size = New Size(306, 27)
-        tb_route.TabIndex = 41
+        tbRoute.Location = New Point(53, 220)
+        tbRoute.Margin = New Padding(3, 2, 3, 2)
+        tbRoute.Name = "tbRoute"
+        tbRoute.PlaceholderText = "Route"
+        tbRoute.ReadOnly = True
+        tbRoute.Size = New Size(218, 23)
+        tbRoute.TabIndex = 41
         ' 
         ' tbstatus
         ' 
-        tbstatus.Location = New Point(188, 159)
+        tbstatus.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        tbstatus.Location = New Point(125, 338)
+        tbstatus.Margin = New Padding(3, 2, 3, 2)
         tbstatus.Name = "tbstatus"
         tbstatus.PlaceholderText = "Status"
         tbstatus.ReadOnly = True
-        tbstatus.Size = New Size(306, 27)
+        tbstatus.Size = New Size(218, 23)
         tbstatus.TabIndex = 40
         ' 
-        ' tbdate_issued
+        ' tbTotalViolations
         ' 
-        tbdate_issued.Location = New Point(188, 192)
-        tbdate_issued.Name = "tbdate_issued"
-        tbdate_issued.PlaceholderText = "Date Issued"
-        tbdate_issued.ReadOnly = True
-        tbdate_issued.Size = New Size(306, 27)
-        tbdate_issued.TabIndex = 39
+        tbTotalViolations.Location = New Point(286, 57)
+        tbTotalViolations.Margin = New Padding(3, 2, 3, 2)
+        tbTotalViolations.Name = "tbTotalViolations"
+        tbTotalViolations.PlaceholderText = "Total Violations"
+        tbTotalViolations.ReadOnly = True
+        tbTotalViolations.Size = New Size(218, 23)
+        tbTotalViolations.TabIndex = 37
         ' 
-        ' tb_expiration
+        ' tbFeePaid
         ' 
-        tb_expiration.Location = New Point(188, 225)
-        tb_expiration.Name = "tb_expiration"
-        tb_expiration.PlaceholderText = "Date of Expiration"
-        tb_expiration.ReadOnly = True
-        tb_expiration.Size = New Size(306, 27)
-        tb_expiration.TabIndex = 38
-        ' 
-        ' tbtotal_violations
-        ' 
-        tbtotal_violations.Location = New Point(188, 258)
-        tbtotal_violations.Name = "tbtotal_violations"
-        tbtotal_violations.PlaceholderText = "Total Violations"
-        tbtotal_violations.ReadOnly = True
-        tbtotal_violations.Size = New Size(306, 27)
-        tbtotal_violations.TabIndex = 37
-        ' 
-        ' tblast_renewal_date
-        ' 
-        tblast_renewal_date.Location = New Point(188, 292)
-        tblast_renewal_date.Name = "tblast_renewal_date"
-        tblast_renewal_date.PlaceholderText = "Last Renewal Date"
-        tblast_renewal_date.ReadOnly = True
-        tblast_renewal_date.Size = New Size(306, 27)
-        tblast_renewal_date.TabIndex = 36
-        ' 
-        ' tbfee_paid
-        ' 
-        tbfee_paid.Location = New Point(188, 325)
-        tbfee_paid.Name = "tbfee_paid"
-        tbfee_paid.PlaceholderText = "Fee Paid"
-        tbfee_paid.ReadOnly = True
-        tbfee_paid.Size = New Size(306, 27)
-        tbfee_paid.TabIndex = 35
+        tbFeePaid.Location = New Point(286, 231)
+        tbFeePaid.Margin = New Padding(3, 2, 3, 2)
+        tbFeePaid.Name = "tbFeePaid"
+        tbFeePaid.PlaceholderText = "Fee Paid"
+        tbFeePaid.ReadOnly = True
+        tbFeePaid.Size = New Size(218, 23)
+        tbFeePaid.TabIndex = 35
         ' 
         ' tb_area
         ' 
-        tb_area.Location = New Point(188, 358)
+        tb_area.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        tb_area.Location = New Point(125, 364)
+        tb_area.Margin = New Padding(3, 2, 3, 2)
         tb_area.Name = "tb_area"
         tb_area.PlaceholderText = "Area"
         tb_area.ReadOnly = True
-        tb_area.Size = New Size(306, 27)
+        tb_area.Size = New Size(218, 23)
         tb_area.TabIndex = 34
         ' 
-        ' tb_association
+        ' tbAssociation
         ' 
-        tb_association.Location = New Point(188, 391)
-        tb_association.Name = "tb_association"
-        tb_association.PlaceholderText = "Association"
-        tb_association.ReadOnly = True
-        tb_association.Size = New Size(306, 27)
-        tb_association.TabIndex = 33
+        tbAssociation.Location = New Point(53, 247)
+        tbAssociation.Margin = New Padding(3, 2, 3, 2)
+        tbAssociation.Name = "tbAssociation"
+        tbAssociation.PlaceholderText = "Association"
+        tbAssociation.ReadOnly = True
+        tbAssociation.Size = New Size(218, 23)
+        tbAssociation.TabIndex = 33
         ' 
-        ' Label3
+        ' tbVehicleID
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(188, 37)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(202, 20)
-        Label3.TabIndex = 32
-        Label3.Text = "FRANCHISE INFORMATION"
-        ' 
-        ' tbvehicle_id
-        ' 
-        tbvehicle_id.Location = New Point(188, 126)
-        tbvehicle_id.Name = "tbvehicle_id"
-        tbvehicle_id.PlaceholderText = "Vehicle ID"
-        tbvehicle_id.ReadOnly = True
-        tbvehicle_id.Size = New Size(306, 27)
-        tbvehicle_id.TabIndex = 31
+        tbVehicleID.Location = New Point(53, 111)
+        tbVehicleID.Margin = New Padding(3, 2, 3, 2)
+        tbVehicleID.Name = "tbVehicleID"
+        tbVehicleID.PlaceholderText = "Vehicle ID"
+        tbVehicleID.ReadOnly = True
+        tbVehicleID.Size = New Size(218, 23)
+        tbVehicleID.TabIndex = 31
         ' 
         ' tbfranchise_type
         ' 
-        tbfranchise_type.Location = New Point(188, 93)
+        tbfranchise_type.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        tbfranchise_type.Location = New Point(125, 313)
+        tbfranchise_type.Margin = New Padding(3, 2, 3, 2)
         tbfranchise_type.Name = "tbfranchise_type"
         tbfranchise_type.PlaceholderText = "Franchise Type"
         tbfranchise_type.ReadOnly = True
-        tbfranchise_type.Size = New Size(306, 27)
+        tbfranchise_type.Size = New Size(218, 23)
         tbfranchise_type.TabIndex = 30
         ' 
-        ' tbfranchise_id
+        ' btnSave
         ' 
-        tbfranchise_id.Location = New Point(188, 60)
-        tbfranchise_id.Name = "tbfranchise_id"
-        tbfranchise_id.PlaceholderText = "Franchise Id No."
-        tbfranchise_id.ReadOnly = True
-        tbfranchise_id.Size = New Size(306, 27)
-        tbfranchise_id.TabIndex = 29
+        btnSave.BackColor = Color.CornflowerBlue
+        btnSave.FlatAppearance.BorderSize = 0
+        btnSave.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
+        btnSave.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
+        btnSave.FlatStyle = FlatStyle.Flat
+        btnSave.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSave.ForeColor = Color.White
+        btnSave.Location = New Point(429, 280)
+        btnSave.Margin = New Padding(3, 2, 3, 2)
+        btnSave.Name = "btnSave"
+        btnSave.Size = New Size(125, 28)
+        btnSave.TabIndex = 44
+        btnSave.Text = "Save"
+        btnSave.UseVisualStyleBackColor = False
         ' 
-        ' BtnAdd
+        ' tbFranchiseeID
         ' 
-        BtnAdd.BackColor = Color.CornflowerBlue
-        BtnAdd.FlatAppearance.BorderSize = 0
-        BtnAdd.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
-        BtnAdd.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
-        BtnAdd.FlatStyle = FlatStyle.Flat
-        BtnAdd.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        BtnAdd.ForeColor = Color.White
-        BtnAdd.Location = New Point(515, 502)
-        BtnAdd.Name = "BtnAdd"
-        BtnAdd.Size = New Size(143, 38)
-        BtnAdd.TabIndex = 44
-        BtnAdd.Text = "Save"
-        BtnAdd.UseVisualStyleBackColor = False
+        tbFranchiseeID.Location = New Point(53, 57)
+        tbFranchiseeID.Margin = New Padding(3, 2, 3, 2)
+        tbFranchiseeID.Name = "tbFranchiseeID"
+        tbFranchiseeID.PlaceholderText = "Franchisee ID"
+        tbFranchiseeID.ReadOnly = True
+        tbFranchiseeID.Size = New Size(218, 23)
+        tbFranchiseeID.TabIndex = 46
+        ' 
+        ' cbxArea
+        ' 
+        cbxArea.FormattingEnabled = True
+        cbxArea.Items.AddRange(New Object() {"approved", "denied", "pending"})
+        cbxArea.Location = New Point(53, 194)
+        cbxArea.Name = "cbxArea"
+        cbxArea.Size = New Size(218, 23)
+        cbxArea.TabIndex = 76
+        ' 
+        ' cbxFranchiseType
+        ' 
+        cbxFranchiseType.FormattingEnabled = True
+        cbxFranchiseType.Items.AddRange(New Object() {"compliant", "non-compliant"})
+        cbxFranchiseType.Location = New Point(53, 84)
+        cbxFranchiseType.Name = "cbxFranchiseType"
+        cbxFranchiseType.Size = New Size(218, 23)
+        cbxFranchiseType.TabIndex = 75
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(286, 162)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(118, 17)
+        Label1.TabIndex = 92
+        Label1.Text = "Last Renewal Date"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(286, 121)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(101, 17)
+        Label2.TabIndex = 91
+        Label2.Text = "Expiration Date"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.BackColor = Color.Transparent
+        Label5.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(286, 79)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(79, 17)
+        Label5.TabIndex = 90
+        Label5.Text = "Date Issued"
+        ' 
+        ' dtpExpirationDate
+        ' 
+        dtpExpirationDate.Location = New Point(286, 138)
+        dtpExpirationDate.Name = "dtpExpirationDate"
+        dtpExpirationDate.Size = New Size(218, 23)
+        dtpExpirationDate.TabIndex = 88
+        ' 
+        ' dtpLastRenewalDate
+        ' 
+        dtpLastRenewalDate.Location = New Point(286, 179)
+        dtpLastRenewalDate.Name = "dtpLastRenewalDate"
+        dtpLastRenewalDate.Size = New Size(218, 23)
+        dtpLastRenewalDate.TabIndex = 87
+        ' 
+        ' dtpDateIssued
+        ' 
+        dtpDateIssued.Location = New Point(286, 96)
+        dtpDateIssued.Name = "dtpDateIssued"
+        dtpDateIssued.Size = New Size(218, 23)
+        dtpDateIssued.TabIndex = 86
+        ' 
+        ' cbxStatus
+        ' 
+        cbxStatus.FormattingEnabled = True
+        cbxStatus.Items.AddRange(New Object() {"approved", "denied", "pending"})
+        cbxStatus.Location = New Point(53, 138)
+        cbxStatus.Name = "cbxStatus"
+        cbxStatus.Size = New Size(218, 23)
+        cbxStatus.TabIndex = 93
+        ' 
+        ' LabelVehicle_Regulatory
+        ' 
+        LabelVehicle_Regulatory.AutoSize = True
+        LabelVehicle_Regulatory.BackColor = Color.Transparent
+        LabelVehicle_Regulatory.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        LabelVehicle_Regulatory.ForeColor = Color.White
+        LabelVehicle_Regulatory.Location = New Point(18, 12)
+        LabelVehicle_Regulatory.Name = "LabelVehicle_Regulatory"
+        LabelVehicle_Regulatory.Size = New Size(173, 17)
+        LabelVehicle_Regulatory.TabIndex = 16
+        LabelVehicle_Regulatory.Text = "FRANCHISE INFORMATION"
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.Black
+        Panel1.Controls.Add(LabelVehicle_Regulatory)
+        Panel1.Controls.Add(btnSearch)
+        Panel1.Controls.Add(txtSearch)
+        Panel1.Dock = DockStyle.Top
+        Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(597, 41)
+        Panel1.TabIndex = 94
+        ' 
+        ' btnSearch
+        ' 
+        btnSearch.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnSearch.BackColor = Color.CornflowerBlue
+        btnSearch.FlatAppearance.BorderSize = 0
+        btnSearch.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
+        btnSearch.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
+        btnSearch.FlatStyle = FlatStyle.Flat
+        btnSearch.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSearch.ForeColor = Color.White
+        btnSearch.Location = New Point(1197, 8)
+        btnSearch.Margin = New Padding(3, 2, 3, 2)
+        btnSearch.Name = "btnSearch"
+        btnSearch.Size = New Size(125, 28)
+        btnSearch.TabIndex = 87
+        btnSearch.Text = "Search"
+        btnSearch.UseVisualStyleBackColor = False
+        ' 
+        ' txtSearch
+        ' 
+        txtSearch.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        txtSearch.BackColor = SystemColors.ScrollBar
+        txtSearch.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtSearch.Location = New Point(972, 11)
+        txtSearch.Name = "txtSearch"
+        txtSearch.PlaceholderText = "  Search to renewal"
+        txtSearch.Size = New Size(219, 23)
+        txtSearch.TabIndex = 86
         ' 
         ' Form2franchise
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.RosyBrown
-        Controls.Add(BtnAdd)
-        Controls.Add(tb_franchise_duration)
-        Controls.Add(tb_license_number)
-        Controls.Add(tb_route)
+        Controls.Add(Panel1)
+        Controls.Add(cbxStatus)
+        Controls.Add(Label1)
+        Controls.Add(Label2)
+        Controls.Add(Label5)
+        Controls.Add(dtpExpirationDate)
+        Controls.Add(dtpLastRenewalDate)
+        Controls.Add(dtpDateIssued)
+        Controls.Add(cbxArea)
+        Controls.Add(cbxFranchiseType)
+        Controls.Add(tbFranchiseeID)
+        Controls.Add(btnSave)
+        Controls.Add(tbFranchiseDuration)
+        Controls.Add(tbLicenseNumber)
+        Controls.Add(tbRoute)
         Controls.Add(tbstatus)
-        Controls.Add(tbdate_issued)
-        Controls.Add(tb_expiration)
-        Controls.Add(tbtotal_violations)
-        Controls.Add(tblast_renewal_date)
-        Controls.Add(tbfee_paid)
+        Controls.Add(tbTotalViolations)
+        Controls.Add(tbFeePaid)
         Controls.Add(tb_area)
-        Controls.Add(tb_association)
-        Controls.Add(Label3)
-        Controls.Add(tbvehicle_id)
+        Controls.Add(tbAssociation)
+        Controls.Add(tbVehicleID)
         Controls.Add(tbfranchise_type)
-        Controls.Add(tbfranchise_id)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "Form2franchise"
-        Size = New Size(682, 555)
+        Size = New Size(597, 416)
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents tb_franchise_duration As TextBox
-    Friend WithEvents tb_license_number As TextBox
-    Friend WithEvents tb_route As TextBox
+    Friend WithEvents tbFranchiseDuration As TextBox
+    Friend WithEvents tbLicenseNumber As TextBox
+    Friend WithEvents tbRoute As TextBox
     Friend WithEvents tbstatus As TextBox
-    Friend WithEvents tbdate_issued As TextBox
-    Friend WithEvents tb_expiration As TextBox
-    Friend WithEvents tbtotal_violations As TextBox
-    Friend WithEvents tblast_renewal_date As TextBox
-    Friend WithEvents tbfee_paid As TextBox
+    Friend WithEvents tbTotalViolations As TextBox
+    Friend WithEvents tbFeePaid As TextBox
     Friend WithEvents tb_area As TextBox
-    Friend WithEvents tb_association As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents tbvehicle_id As TextBox
+    Friend WithEvents tbAssociation As TextBox
+    Friend WithEvents tbVehicleID As TextBox
     Friend WithEvents tbfranchise_type As TextBox
-    Friend WithEvents tbfranchise_id As TextBox
-    Friend WithEvents BtnAdd As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents tbFranchiseeID As TextBox
+    Friend WithEvents cbxArea As ComboBox
+    Friend WithEvents cbxFranchiseType As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents dtpExpirationDate As DateTimePicker
+    Friend WithEvents dtpLastRenewalDate As DateTimePicker
+    Friend WithEvents dtpDateIssued As DateTimePicker
+    Friend WithEvents cbxStatus As ComboBox
+    Friend WithEvents LabelVehicle_Regulatory As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents txtSearch As TextBox
 
 End Class

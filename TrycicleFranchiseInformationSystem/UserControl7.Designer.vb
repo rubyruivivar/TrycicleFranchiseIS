@@ -41,16 +41,18 @@ Partial Class EntryForms
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(21, 62)
+        Button1.Location = New Point(18, 46)
+        Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
-        Button1.Size = New Size(218, 54)
+        Button1.Size = New Size(191, 40)
         Button1.TabIndex = 0
         Button1.Text = "Franchisee Form"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(259, 190)
+        Button2.Location = New Point(227, 142)
+        Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
         Button2.Size = New Size(0, 0)
         Button2.TabIndex = 1
@@ -67,9 +69,10 @@ Partial Class EntryForms
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
-        Button3.Location = New Point(21, 136)
+        Button3.Location = New Point(18, 102)
+        Button3.Margin = New Padding(3, 2, 3, 2)
         Button3.Name = "Button3"
-        Button3.Size = New Size(218, 54)
+        Button3.Size = New Size(191, 40)
         Button3.TabIndex = 2
         Button3.Text = "Franchise Form"
         Button3.UseVisualStyleBackColor = False
@@ -84,9 +87,10 @@ Partial Class EntryForms
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(21, 213)
+        Button4.Location = New Point(18, 160)
+        Button4.Margin = New Padding(3, 2, 3, 2)
         Button4.Name = "Button4"
-        Button4.Size = New Size(218, 54)
+        Button4.Size = New Size(191, 40)
         Button4.TabIndex = 3
         Button4.Text = "Vehicle Form"
         Button4.UseVisualStyleBackColor = False
@@ -101,9 +105,10 @@ Partial Class EntryForms
         Button5.FlatStyle = FlatStyle.Flat
         Button5.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button5.ForeColor = Color.White
-        Button5.Location = New Point(21, 294)
+        Button5.Location = New Point(18, 220)
+        Button5.Margin = New Padding(3, 2, 3, 2)
         Button5.Name = "Button5"
-        Button5.Size = New Size(218, 54)
+        Button5.Size = New Size(191, 40)
         Button5.TabIndex = 4
         Button5.Text = "Regulatory Authority"
         Button5.UseVisualStyleBackColor = False
@@ -118,9 +123,10 @@ Partial Class EntryForms
         Button6.FlatStyle = FlatStyle.Flat
         Button6.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button6.ForeColor = Color.White
-        Button6.Location = New Point(21, 368)
+        Button6.Location = New Point(18, 276)
+        Button6.Margin = New Padding(3, 2, 3, 2)
         Button6.Name = "Button6"
-        Button6.Size = New Size(218, 54)
+        Button6.Size = New Size(191, 40)
         Button6.TabIndex = 5
         Button6.Text = "Renewal Status"
         Button6.UseVisualStyleBackColor = False
@@ -130,14 +136,15 @@ Partial Class EntryForms
         PanelForms.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         PanelForms.AutoSize = True
         PanelForms.BackColor = Color.RosyBrown
-        PanelForms.Location = New Point(262, 3)
+        PanelForms.Location = New Point(233, 46)
+        PanelForms.Margin = New Padding(3, 2, 3, 2)
         PanelForms.Name = "PanelForms"
-        PanelForms.Size = New Size(686, 555)
+        PanelForms.Size = New Size(695, 467)
         PanelForms.TabIndex = 6
         ' 
         ' EntryForms
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         BackColor = Color.MistyRose
@@ -148,6 +155,7 @@ Partial Class EntryForms
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "EntryForms"
         Size = New Size(949, 561)
         ResumeLayout(False)

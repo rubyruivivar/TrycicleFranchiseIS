@@ -43,131 +43,146 @@ Partial Class Form4regulatory
         ' 
         ' tb_last_name
         ' 
-        tb_last_name.Location = New Point(189, 143)
+        tb_last_name.Location = New Point(165, 107)
+        tb_last_name.Margin = New Padding(3, 2, 3, 2)
         tb_last_name.Name = "tb_last_name"
         tb_last_name.PlaceholderText = "Last Name"
-        tb_last_name.Size = New Size(278, 27)
+        tb_last_name.Size = New Size(244, 23)
         tb_last_name.TabIndex = 31
         ' 
         ' tb_phone_number
         ' 
-        tb_phone_number.Location = New Point(189, 176)
+        tb_phone_number.Location = New Point(165, 132)
+        tb_phone_number.Margin = New Padding(3, 2, 3, 2)
         tb_phone_number.Name = "tb_phone_number"
         tb_phone_number.PlaceholderText = "Phone Number"
-        tb_phone_number.Size = New Size(278, 27)
+        tb_phone_number.Size = New Size(244, 23)
         tb_phone_number.TabIndex = 30
         ' 
         ' tbgender
         ' 
-        tbgender.Location = New Point(189, 209)
+        tbgender.Location = New Point(165, 157)
+        tbgender.Margin = New Padding(3, 2, 3, 2)
         tbgender.Name = "tbgender"
         tbgender.PlaceholderText = "Gender"
-        tbgender.Size = New Size(278, 27)
+        tbgender.Size = New Size(244, 23)
         tbgender.TabIndex = 29
         ' 
         ' tbstatus
         ' 
-        tbstatus.Location = New Point(189, 506)
+        tbstatus.Location = New Point(165, 380)
+        tbstatus.Margin = New Padding(3, 2, 3, 2)
         tbstatus.Name = "tbstatus"
         tbstatus.PlaceholderText = "Status"
-        tbstatus.Size = New Size(278, 27)
+        tbstatus.Size = New Size(244, 23)
         tbstatus.TabIndex = 28
         ' 
         ' tbdepartment
         ' 
-        tbdepartment.Location = New Point(189, 473)
+        tbdepartment.Location = New Point(165, 355)
+        tbdepartment.Margin = New Padding(3, 2, 3, 2)
         tbdepartment.Name = "tbdepartment"
         tbdepartment.PlaceholderText = "Department"
-        tbdepartment.Size = New Size(278, 27)
+        tbdepartment.Size = New Size(244, 23)
         tbdepartment.TabIndex = 27
         ' 
         ' tb_email
         ' 
-        tb_email.Location = New Point(189, 341)
+        tb_email.Location = New Point(165, 256)
+        tb_email.Margin = New Padding(3, 2, 3, 2)
         tb_email.Name = "tb_email"
         tb_email.PlaceholderText = "Email Address"
-        tb_email.Size = New Size(278, 27)
+        tb_email.Size = New Size(244, 23)
         tb_email.TabIndex = 26
         ' 
         ' tb_birthdate
         ' 
-        tb_birthdate.Location = New Point(189, 374)
+        tb_birthdate.Location = New Point(165, 280)
+        tb_birthdate.Margin = New Padding(3, 2, 3, 2)
         tb_birthdate.Name = "tb_birthdate"
         tb_birthdate.PlaceholderText = "Date of Birth"
-        tb_birthdate.Size = New Size(278, 27)
+        tb_birthdate.Size = New Size(244, 23)
         tb_birthdate.TabIndex = 25
         ' 
         ' tbjob_dessignation
         ' 
-        tbjob_dessignation.Location = New Point(189, 440)
+        tbjob_dessignation.Location = New Point(165, 330)
+        tbjob_dessignation.Margin = New Padding(3, 2, 3, 2)
         tbjob_dessignation.Name = "tbjob_dessignation"
         tbjob_dessignation.PlaceholderText = "Job Designation"
-        tbjob_dessignation.Size = New Size(278, 27)
+        tbjob_dessignation.Size = New Size(244, 23)
         tbjob_dessignation.TabIndex = 24
         ' 
         ' tbmunicipality
         ' 
-        tbmunicipality.Location = New Point(189, 275)
+        tbmunicipality.Location = New Point(165, 206)
+        tbmunicipality.Margin = New Padding(3, 2, 3, 2)
         tbmunicipality.Name = "tbmunicipality"
         tbmunicipality.PlaceholderText = "Municipality"
-        tbmunicipality.Size = New Size(278, 27)
+        tbmunicipality.Size = New Size(244, 23)
         tbmunicipality.TabIndex = 23
         ' 
         ' tbemployment_date
         ' 
-        tbemployment_date.Location = New Point(189, 407)
+        tbemployment_date.Location = New Point(165, 305)
+        tbemployment_date.Margin = New Padding(3, 2, 3, 2)
         tbemployment_date.Name = "tbemployment_date"
         tbemployment_date.PlaceholderText = "Date of Employment"
-        tbemployment_date.Size = New Size(278, 27)
+        tbemployment_date.Size = New Size(244, 23)
         tbemployment_date.TabIndex = 22
         ' 
         ' tbcity_province
         ' 
-        tbcity_province.Location = New Point(189, 308)
+        tbcity_province.Location = New Point(165, 231)
+        tbcity_province.Margin = New Padding(3, 2, 3, 2)
         tbcity_province.Name = "tbcity_province"
         tbcity_province.PlaceholderText = "City/Province"
-        tbcity_province.Size = New Size(278, 27)
+        tbcity_province.Size = New Size(244, 23)
         tbcity_province.TabIndex = 21
         ' 
         ' tbbarangay
         ' 
-        tbbarangay.Location = New Point(189, 242)
+        tbbarangay.Location = New Point(165, 182)
+        tbbarangay.Margin = New Padding(3, 2, 3, 2)
         tbbarangay.Name = "tbbarangay"
         tbbarangay.PlaceholderText = "Barangay"
-        tbbarangay.Size = New Size(278, 27)
+        tbbarangay.Size = New Size(244, 23)
         tbbarangay.TabIndex = 20
         ' 
         ' tb_middle_name
         ' 
-        tb_middle_name.Location = New Point(189, 110)
+        tb_middle_name.Location = New Point(165, 82)
+        tb_middle_name.Margin = New Padding(3, 2, 3, 2)
         tb_middle_name.Name = "tb_middle_name"
         tb_middle_name.PlaceholderText = "Middle Name"
-        tb_middle_name.Size = New Size(278, 27)
+        tb_middle_name.Size = New Size(244, 23)
         tb_middle_name.TabIndex = 19
         ' 
         ' tb_first_name
         ' 
-        tb_first_name.Location = New Point(189, 77)
+        tb_first_name.Location = New Point(165, 58)
+        tb_first_name.Margin = New Padding(3, 2, 3, 2)
         tb_first_name.Name = "tb_first_name"
         tb_first_name.PlaceholderText = "First Name"
-        tb_first_name.Size = New Size(278, 27)
+        tb_first_name.Size = New Size(244, 23)
         tb_first_name.TabIndex = 18
         ' 
         ' tb_authority_id
         ' 
-        tb_authority_id.Location = New Point(189, 44)
+        tb_authority_id.Location = New Point(165, 33)
+        tb_authority_id.Margin = New Padding(3, 2, 3, 2)
         tb_authority_id.Name = "tb_authority_id"
         tb_authority_id.PlaceholderText = "Authority ID"
-        tb_authority_id.Size = New Size(278, 27)
+        tb_authority_id.Size = New Size(244, 23)
         tb_authority_id.TabIndex = 17
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(174, 21)
+        Label1.Location = New Point(152, 16)
         Label1.Name = "Label1"
-        Label1.Size = New Size(306, 20)
+        Label1.Size = New Size(240, 15)
         Label1.TabIndex = 16
         Label1.Text = "REGULATORY AUTHORITY INFORMATION"
         ' 
@@ -180,16 +195,17 @@ Partial Class Form4regulatory
         BtnAdd.FlatStyle = FlatStyle.Flat
         BtnAdd.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnAdd.ForeColor = Color.White
-        BtnAdd.Location = New Point(515, 502)
+        BtnAdd.Location = New Point(451, 376)
+        BtnAdd.Margin = New Padding(3, 2, 3, 2)
         BtnAdd.Name = "BtnAdd"
-        BtnAdd.Size = New Size(143, 38)
+        BtnAdd.Size = New Size(125, 28)
         BtnAdd.TabIndex = 45
         BtnAdd.Text = "Save"
         BtnAdd.UseVisualStyleBackColor = False
         ' 
         ' Form4regulatory
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         BackColor = Color.RosyBrown
@@ -210,8 +226,9 @@ Partial Class Form4regulatory
         Controls.Add(tb_first_name)
         Controls.Add(tb_authority_id)
         Controls.Add(Label1)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "Form4regulatory"
-        Size = New Size(682, 555)
+        Size = New Size(597, 416)
         ResumeLayout(False)
         PerformLayout()
     End Sub

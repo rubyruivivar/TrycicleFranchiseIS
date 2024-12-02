@@ -26,9 +26,11 @@ Partial Class UserControl3
         ' 
         ' UserControl3
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        Margin = New Padding(3, 2, 3, 2)
         Name = "UserControl3"
+        Size = New Size(131, 112)
         ResumeLayout(False)
     End Sub
 

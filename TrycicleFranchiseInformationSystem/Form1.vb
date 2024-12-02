@@ -88,7 +88,11 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        MessageBox.Show("Button3 clicked")
+        Panel2.Controls.Clear()
+        Dim franchiselist As New UserControl9()
+        franchiselist.Dock = DockStyle.Fill ' Use Dock instead of Anchor
+        Panel2.Controls.Add(franchiselist)
+        franchiselist.Show()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -96,11 +100,18 @@
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        MessageBox.Show("Button5 clicked")
+        Panel2.Controls.Clear()
+        Dim regulatoryauthority As New UserControl11()
+        regulatoryauthority.Dock = DockStyle.Fill ' Use Dock instead of Anchor
+        Panel2.Controls.Add(regulatoryauthority)
+        regulatoryauthority.Show()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        MessageBox.Show("Button6 clicked")
+        Panel2.Controls.Clear()
+        Dim renewaldata As New RenewalData()
+        Panel2.Controls.Add(renewaldata)
+        renewaldata.Show()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
@@ -167,19 +178,4 @@
         dashboardContent.Show()
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
-    Private Sub PanelDashboard_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-
-    End Sub
 End Class

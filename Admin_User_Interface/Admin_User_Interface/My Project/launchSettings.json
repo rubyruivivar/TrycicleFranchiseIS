@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Admin_User_Interface": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\user\\Desktop\\bjen\\IT106-IM\\tricfran\\Admin_User_Interface"
+    }
+  }
+}

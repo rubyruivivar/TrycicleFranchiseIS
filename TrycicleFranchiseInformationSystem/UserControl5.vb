@@ -55,34 +55,34 @@ Public Class Form5Renewal
                 Exit Sub
             End If
 
-            If txtFranchiseID.Text.Trim = Nothing Then
+            If tbFranchiseID.Text.Trim = Nothing Then
                 MsgBox("Enter Franchise ID.")
-                txtFranchiseID.Focus()
+                tbFranchiseID.Focus()
                 Exit Sub
             End If
-            If txtFranchiseeID.Text.Trim = Nothing Then
+            If tbFranchiseeID.Text.Trim = Nothing Then
                 MsgBox("Enter Franchisee ID.")
-                txtFranchiseeID.Focus()
+                tbFranchiseeID.Focus()
                 Exit Sub
             End If
-            If txtRenewalNumber.Text.Trim = Nothing Then
+            If tbRenewalNumber.Text.Trim = Nothing Then
                 MsgBox("Enter Renewal Number.")
-                txtRenewalNumber.Focus()
+                tbRenewalNumber.Focus()
                 Exit Sub
             End If
-            If txtRenewalFee.Text.Trim = Nothing Then
+            If tbRenewalFee.Text.Trim = Nothing Then
                 MsgBox("Enter Renewal Fee.")
-                txtRenewalFee.Focus()
+                tbRenewalFee.Focus()
                 Exit Sub
             End If
-            If txtPenaltyFee.Text.Trim = Nothing Then
+            If tbPenaltyFee.Text.Trim = Nothing Then
                 MsgBox("Enter Penalty Fee.")
-                txtPenaltyFee.Focus()
+                tbPenaltyFee.Focus()
                 Exit Sub
             End If
-            If txtAuthorityID.Text.Trim = Nothing Then
+            If tbAuthorityID.Text.Trim = Nothing Then
                 MsgBox("Enter Authority ID.")
-                txtAuthorityID.Focus()
+                tbAuthorityID.Focus()
                 Exit Sub
             End If
 
@@ -95,12 +95,12 @@ Public Class Form5Renewal
             Dim query As String = String.Format("INSERT INTO renewaldatabase " &
                                                 "(franchise_id, franchisee_id, renewal_type, compliance_status, status, submission_date, processing_date, approval_date, expiration_date, renewal_number, renewal_fee, penalty_fee, authority_id) " &
                                                 "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}')",
-                                                txtFranchiseID.Text.Trim, txtFranchiseeID.Text.Trim,
+                                                tbFranchiseID.Text.Trim, tbFranchiseeID.Text.Trim,
                                                 cbxRenewalType.Text.Trim, cbxComplianceStatus.Text.Trim, cbxStatus.Text.Trim,
                                                 dtpSubmissionDate.Value.ToString("yyyy-MM-dd"), dtpProcessingDate.Value.ToString("yyyy-MM-dd"),
                                                 dtpApprovalDate.Value.ToString("yyyy-MM-dd"), dtpExpirationDate.Value.ToString("yyyy-MM-dd"),
-                                                txtRenewalNumber.Text.Trim, txtRenewalFee.Text.Trim, txtPenaltyFee.Text.Trim,
-                                                txtAuthorityID.Text.Trim)
+                                                tbRenewalNumber.Text.Trim, tbRenewalFee.Text.Trim, tbPenaltyFee.Text.Trim,
+                                                tbAuthorityID.Text.Trim)
 
             ' Execute the query using the module method
             ' RenewalDatabaseModule.ExecuteNonQuery(query)
@@ -118,12 +118,12 @@ Public Class Form5Renewal
 
     ' Clear form fields after successful save
     Private Sub ClearFormFields()
-        txtFranchiseID.Clear()
-        txtFranchiseeID.Clear()
-        txtRenewalNumber.Clear()
-        txtRenewalFee.Clear()
-        txtPenaltyFee.Clear()
-        txtAuthorityID.Clear()
+        tbFranchiseID.Clear()
+        tbFranchiseeID.Clear()
+        tbRenewalNumber.Clear()
+        tbRenewalFee.Clear()
+        tbPenaltyFee.Clear()
+        tbAuthorityID.Clear()
 
         cbxRenewalType.Text = "Renewal Type"
         cbxComplianceStatus.Text = "Compliance Status"
@@ -133,4 +133,6 @@ Public Class Form5Renewal
         cbxStatus.ForeColor = Color.Gray
 
     End Sub
+
+
 End Class

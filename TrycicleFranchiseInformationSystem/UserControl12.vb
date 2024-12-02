@@ -101,20 +101,20 @@
     ' Update Button Click
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Try
-            If txtFranchiseID.Tag Is Nothing Then
+            If tbFranchiseID.Tag Is Nothing Then
                 MsgBox("Select a record to update.", MsgBoxStyle.Exclamation)
                 Exit Sub
             End If
 
             ' Validate that the required fields are filled
-            If txtFranchiseID.Text.Trim = Nothing Then
+            If tbFranchiseID.Text.Trim = Nothing Then
                 MsgBox("Enter Franchisee ID.")
-                txtFranchiseID.Focus()
+                tbFranchiseID.Focus()
                 Exit Sub
             End If
-            If txtFranchiseeID.Text.Trim = Nothing Then
+            If tbFranchiseeID.Text.Trim = Nothing Then
                 MsgBox("Enter Franchisee ID.")
-                txtFranchiseeID.Focus()
+                tbFranchiseeID.Focus()
                 Exit Sub
             End If
 
@@ -124,24 +124,24 @@
                 Exit Sub
             End If
 
-            If txtRenewalNumber.Text.Trim = Nothing Then
+            If tbRenewalNumber.Text.Trim = Nothing Then
                 MsgBox("Enter Renewal Number.")
-                txtRenewalNumber.Focus()
+                tbRenewalNumber.Focus()
                 Exit Sub
             End If
-            If txtRenewalFee.Text.Trim = Nothing Then
+            If tbRenewalFee.Text.Trim = Nothing Then
                 MsgBox("Enter Renewal Fee.")
-                txtRenewalFee.Focus()
+                tbRenewalFee.Focus()
                 Exit Sub
             End If
-            If txtPenaltyFee.Text.Trim = Nothing Then
+            If tbPenaltyFee.Text.Trim = Nothing Then
                 MsgBox("Enter Penalty Fee.")
-                txtPenaltyFee.Focus()
+                tbPenaltyFee.Focus()
                 Exit Sub
             End If
-            If txtAuthorityID.Text.Trim = Nothing Then
+            If tbAuthorityID.Text.Trim = Nothing Then
                 MsgBox("Enter Fee Paid.")
-                txtAuthorityID.Focus()
+                tbAuthorityID.Focus()
                 Exit Sub
             End If
 
@@ -155,11 +155,11 @@
                                                     "renewal_number='{9}', renewal_fee='{10}', penalty_fee='{11}', " &
                                                     "authority_id='{12}' " &
                                                     "WHERE renewal_id='{13}'",
-                                                    txtFranchiseID.Text, txtFranchiseeID.Text, dtpSubmissionDate.Value.ToString("yyyy-MM-dd"),
+                                                    tbFranchiseID.Text, tbFranchiseeID.Text, dtpSubmissionDate.Value.ToString("yyyy-MM-dd"),
                                                     dtpProcessingDate.Value.ToString("yyyy-MM-dd"), dtpApprovalDate.Value.ToString("yyyy-MM-dd"),
                                                     dtpExpirationDate.Value.ToString("yyyy-MM-dd"), cbxRenewalType.Text, cbxComplianceStatus.Text,
-                                                    cbxStatus.Text, txtRenewalNumber.Text, txtRenewalFee.Text, txtPenaltyFee.Text, txtAuthorityID.Text,
-                                                    txtFranchiseID.Tag)
+                                                    cbxStatus.Text, tbRenewalNumber.Text, tbRenewalFee.Text, tbPenaltyFee.Text, tbAuthorityID.Text,
+                                                    tbFranchiseID.Tag)
 
                 ' Execute the query
                 ' RenewalDatabaseModule.ExecuteNonQuery(query)
@@ -184,18 +184,18 @@
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Try
             ' Check if a record is selected
-            If txtFranchiseID.Tag Is Nothing Then
+            If tbFranchiseID.Tag Is Nothing Then
                 MsgBox("Select a record to delete.", MsgBoxStyle.Exclamation)
                 Exit Sub
             End If
 
             ' Confirmation message
-            If MsgBox("Are you sure you want to delete record with Renewal ID: " & txtFranchiseID.Tag &
-                      " belonging to Franchisee ID: " & txtFranchiseeID.Text & "?",
+            If MsgBox("Are you sure you want to delete record with Renewal ID: " & tbFranchiseID.Tag &
+                      " belonging to Franchisee ID: " & tbFranchiseeID.Text & "?",
                       MsgBoxStyle.YesNo, "Delete Record") = MsgBoxResult.Yes Then
 
                 ' Delete query
-                Dim query = String.Format("DELETE FROM renewaldatabase WHERE renewal_id='{0}'", txtFranchiseID.Tag)
+                Dim query = String.Format("DELETE FROM renewaldatabase WHERE renewal_id='{0}'", tbFranchiseID.Tag)
 
                 ' Execute the query
                 ' RenewalDatabaseModule.ExecuteNonQuery(query)
@@ -219,13 +219,13 @@
     Private Sub dgvRenewal_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRenewal.CellDoubleClick
         Try
             Dim row As DataGridViewRow = dgvRenewal.Rows(e.RowIndex)
-            txtFranchiseID.Tag = row.Cells("Renewal ID").Value
-            txtFranchiseID.Text = row.Cells("Franchise ID").Value.ToString()
-            txtFranchiseeID.Text = row.Cells("Franchisee ID").Value.ToString()
-            txtRenewalNumber.Text = row.Cells("Renewal Number").Value.ToString()
-            txtRenewalFee.Text = row.Cells("Renewal Fee").Value.ToString()
-            txtPenaltyFee.Text = row.Cells("Penalty Fee").Value.ToString()
-            txtAuthorityID.Text = row.Cells("Authority ID").Value.ToString()
+            tbFranchiseeID.Tag = row.Cells("Renewal ID").Value
+            tbFranchiseeID.Text = row.Cells("Franchisee ID").Value.ToString()
+            tbFranchiseID.Text = row.Cells("Franchise ID").Value.ToString()
+            tbRenewalNumber.Text = row.Cells("Renewal Number").Value.ToString()
+            tbRenewalFee.Text = row.Cells("Renewal Fee").Value.ToString()
+            tbPenaltyFee.Text = row.Cells("Penalty Fee").Value.ToString()
+            tbAuthorityID.Text = row.Cells("Authority ID").Value.ToString()
             cbxRenewalType.Text = row.Cells("Renewal Type").Value.ToString()
             cbxComplianceStatus.Text = row.Cells("Compliance Status").Value.ToString()
             cbxStatus.Text = row.Cells("Status").Value.ToString()
@@ -240,12 +240,12 @@
 
     ' Clear Form Fields
     Private Sub ClearFormFields()
-        txtFranchiseID.Clear()
-        txtFranchiseeID.Clear()
-        txtRenewalNumber.Clear()
-        txtRenewalFee.Clear()
-        txtPenaltyFee.Clear()
-        txtAuthorityID.Clear()
+        tbFranchiseID.Clear()
+        tbFranchiseeID.Clear()
+        tbRenewalNumber.Clear()
+        tbRenewalFee.Clear()
+        tbPenaltyFee.Clear()
+        tbAuthorityID.Clear()
         cbxRenewalType.SelectedIndex = -1
         cbxComplianceStatus.SelectedIndex = -1
         cbxStatus.SelectedIndex = -1
@@ -254,4 +254,5 @@
         dtpApprovalDate.Value = DateTime.Now
         dtpExpirationDate.Value = DateTime.Now
     End Sub
+
 End Class
