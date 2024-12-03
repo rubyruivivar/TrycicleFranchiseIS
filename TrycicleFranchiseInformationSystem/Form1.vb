@@ -174,7 +174,7 @@
         Panel2.Controls.Clear()
         Panel2.Controls.Add(dashboardContent)
 
-        ' Show dashboardContent
+        ' Show dashboardContent.
         dashboardContent.Show()
     End Sub
 

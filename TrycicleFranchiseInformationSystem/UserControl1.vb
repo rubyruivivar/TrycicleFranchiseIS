@@ -2,7 +2,7 @@
     Private Sub Form2franchise_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Dock = DockStyle.Fill
 
-        ' Set placeholders for all ComboBoxes
+        ' Set placeholders for all ComboBoxes.
         SetComboBoxPlaceholder(cbxFranchiseType, "Renewal Type")
         SetComboBoxPlaceholder(cbxStatus, "Compliance Status")
         SetComboBoxPlaceholder(cbxArea, "Status")

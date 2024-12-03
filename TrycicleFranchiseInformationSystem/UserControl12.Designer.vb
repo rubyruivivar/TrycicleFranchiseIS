@@ -99,7 +99,7 @@ Partial Class RenewalData
         ' 
         lblRecordCount.AutoSize = True
         lblRecordCount.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblRecordCount.Location = New Point(32, 338)
+        lblRecordCount.Location = New Point(32, 337)
         lblRecordCount.Name = "lblRecordCount"
         lblRecordCount.Size = New Size(43, 15)
         lblRecordCount.TabIndex = 48

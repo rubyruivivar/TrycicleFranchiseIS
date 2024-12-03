@@ -25,13 +25,10 @@ Partial Class Form2franchise
         tbFranchiseDuration = New TextBox()
         tbLicenseNumber = New TextBox()
         tbRoute = New TextBox()
-        tbstatus = New TextBox()
         tbTotalViolations = New TextBox()
         tbFeePaid = New TextBox()
-        tb_area = New TextBox()
         tbAssociation = New TextBox()
         tbVehicleID = New TextBox()
-        tbfranchise_type = New TextBox()
         btnSave = New Button()
         tbFranchiseeID = New TextBox()
         cbxArea = New ComboBox()
@@ -80,17 +77,6 @@ Partial Class Form2franchise
         tbRoute.Size = New Size(218, 23)
         tbRoute.TabIndex = 41
         ' 
-        ' tbstatus
-        ' 
-        tbstatus.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        tbstatus.Location = New Point(125, 338)
-        tbstatus.Margin = New Padding(3, 2, 3, 2)
-        tbstatus.Name = "tbstatus"
-        tbstatus.PlaceholderText = "Status"
-        tbstatus.ReadOnly = True
-        tbstatus.Size = New Size(218, 23)
-        tbstatus.TabIndex = 40
-        ' 
         ' tbTotalViolations
         ' 
         tbTotalViolations.Location = New Point(286, 57)
@@ -111,17 +97,6 @@ Partial Class Form2franchise
         tbFeePaid.Size = New Size(218, 23)
         tbFeePaid.TabIndex = 35
         ' 
-        ' tb_area
-        ' 
-        tb_area.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        tb_area.Location = New Point(125, 364)
-        tb_area.Margin = New Padding(3, 2, 3, 2)
-        tb_area.Name = "tb_area"
-        tb_area.PlaceholderText = "Area"
-        tb_area.ReadOnly = True
-        tb_area.Size = New Size(218, 23)
-        tb_area.TabIndex = 34
-        ' 
         ' tbAssociation
         ' 
         tbAssociation.Location = New Point(53, 247)
@@ -141,17 +116,6 @@ Partial Class Form2franchise
         tbVehicleID.ReadOnly = True
         tbVehicleID.Size = New Size(218, 23)
         tbVehicleID.TabIndex = 31
-        ' 
-        ' tbfranchise_type
-        ' 
-        tbfranchise_type.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        tbfranchise_type.Location = New Point(125, 313)
-        tbfranchise_type.Margin = New Padding(3, 2, 3, 2)
-        tbfranchise_type.Name = "tbfranchise_type"
-        tbfranchise_type.PlaceholderText = "Franchise Type"
-        tbfranchise_type.ReadOnly = True
-        tbfranchise_type.Size = New Size(218, 23)
-        tbfranchise_type.TabIndex = 30
         ' 
         ' btnSave
         ' 
@@ -335,13 +299,10 @@ Partial Class Form2franchise
         Controls.Add(tbFranchiseDuration)
         Controls.Add(tbLicenseNumber)
         Controls.Add(tbRoute)
-        Controls.Add(tbstatus)
         Controls.Add(tbTotalViolations)
         Controls.Add(tbFeePaid)
-        Controls.Add(tb_area)
         Controls.Add(tbAssociation)
         Controls.Add(tbVehicleID)
-        Controls.Add(tbfranchise_type)
         Margin = New Padding(3, 2, 3, 2)
         Name = "Form2franchise"
         Size = New Size(597, 416)
@@ -354,13 +315,10 @@ Partial Class Form2franchise
     Friend WithEvents tbFranchiseDuration As TextBox
     Friend WithEvents tbLicenseNumber As TextBox
     Friend WithEvents tbRoute As TextBox
-    Friend WithEvents tbstatus As TextBox
     Friend WithEvents tbTotalViolations As TextBox
     Friend WithEvents tbFeePaid As TextBox
-    Friend WithEvents tb_area As TextBox
     Friend WithEvents tbAssociation As TextBox
     Friend WithEvents tbVehicleID As TextBox
-    Friend WithEvents tbfranchise_type As TextBox
     Friend WithEvents btnSave As Button
     Friend WithEvents tbFranchiseeID As TextBox
     Friend WithEvents cbxArea As ComboBox

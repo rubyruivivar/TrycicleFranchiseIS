@@ -189,7 +189,7 @@
                 Exit Sub
             End If
 
-            ' Confirmation message
+            ' Confirmation message.
             If MsgBox("Are you sure you want to delete record with Renewal ID: " & tbFranchiseID.Tag &
                       " belonging to Franchisee ID: " & tbFranchiseeID.Text & "?",
                       MsgBoxStyle.YesNo, "Delete Record") = MsgBoxResult.Yes Then

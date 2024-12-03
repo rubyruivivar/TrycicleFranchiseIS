@@ -102,7 +102,7 @@ Public Class Form5Renewal
                                                 tbRenewalNumber.Text.Trim, tbRenewalFee.Text.Trim, tbPenaltyFee.Text.Trim,
                                                 tbAuthorityID.Text.Trim)
 
-            ' Execute the query using the module method
+            ' Execute the query using the module method.
             ' RenewalDatabaseModule.ExecuteNonQuery(query)
             modDB.readQuery(query)
 

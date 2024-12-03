@@ -11,7 +11,7 @@ Module modDB
     Public db_server As String = "'localhost'"
     Public db_uid As String = "'root'"
     Public db_pwd As String = "''"
-    Public db_name As String = "'student_profile'"
+    Public db_name As String = "'student_profile'" 'database name
     Public strConnection As String = "server=" & db_server & ";uid=" & db_uid & ";password=" & db_pwd & ";database=" & db_name & ";" & "allowuservariables='True';"
 
     Public Structure LoggedUser

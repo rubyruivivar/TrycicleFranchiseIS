@@ -189,7 +189,7 @@ Partial Class Form3vehicle
         BtnAdd.FlatStyle = FlatStyle.Flat
         BtnAdd.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnAdd.ForeColor = Color.White
-        BtnAdd.Location = New Point(431, 319)
+        BtnAdd.Location = New Point(431, 309)
         BtnAdd.Margin = New Padding(3, 2, 3, 2)
         BtnAdd.Name = "BtnAdd"
         BtnAdd.Size = New Size(125, 28)

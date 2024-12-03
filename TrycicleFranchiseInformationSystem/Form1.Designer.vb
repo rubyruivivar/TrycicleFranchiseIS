@@ -315,7 +315,7 @@ Partial Class Form1
         BtnLogout.FlatAppearance.MouseDownBackColor = Color.DimGray
         BtnLogout.FlatAppearance.MouseOverBackColor = Color.DimGray
         BtnLogout.FlatStyle = FlatStyle.Flat
-        BtnLogout.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BtnLogout.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnLogout.ForeColor = SystemColors.ButtonHighlight
         BtnLogout.Image = My.Resources.Resources.Log_Out__1_
         BtnLogout.ImageAlign = ContentAlignment.MiddleLeft
@@ -337,7 +337,7 @@ Partial Class Form1
         BtnReports.FlatAppearance.MouseDownBackColor = Color.DimGray
         BtnReports.FlatAppearance.MouseOverBackColor = Color.DimGray
         BtnReports.FlatStyle = FlatStyle.Flat
-        BtnReports.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BtnReports.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnReports.ForeColor = SystemColors.ButtonHighlight
         BtnReports.Image = My.Resources.Resources.Reports__1_
         BtnReports.ImageAlign = ContentAlignment.MiddleLeft
@@ -476,7 +476,7 @@ Partial Class Form1
         ButtonMenu.FlatAppearance.MouseDownBackColor = Color.Gray
         ButtonMenu.FlatAppearance.MouseOverBackColor = Color.Gray
         ButtonMenu.FlatStyle = FlatStyle.Flat
-        ButtonMenu.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ButtonMenu.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ButtonMenu.ForeColor = SystemColors.ButtonHighlight
         ButtonMenu.Image = CType(resources.GetObject("ButtonMenu.Image"), Image)
         ButtonMenu.ImageAlign = ContentAlignment.MiddleLeft
@@ -498,7 +498,7 @@ Partial Class Form1
         BtnDashboard.FlatAppearance.MouseDownBackColor = Color.Gray
         BtnDashboard.FlatAppearance.MouseOverBackColor = Color.Gray
         BtnDashboard.FlatStyle = FlatStyle.Flat
-        BtnDashboard.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BtnDashboard.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnDashboard.ForeColor = SystemColors.ButtonHighlight
         BtnDashboard.Image = My.Resources.Resources.Vector
         BtnDashboard.ImageAlign = ContentAlignment.MiddleLeft
@@ -585,7 +585,7 @@ Partial Class Form1
         Button1.FlatAppearance.BorderColor = Color.Black
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = SystemColors.ButtonHighlight
         Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
         Button1.ImageAlign = ContentAlignment.TopLeft
@@ -623,7 +623,7 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LavenderBlush
         ClientSize = New Size(817, 562)

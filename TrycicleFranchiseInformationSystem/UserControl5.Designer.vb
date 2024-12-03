@@ -135,9 +135,9 @@ Partial Class Form5Renewal
         btnSave.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
         btnSave.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
         btnSave.FlatStyle = FlatStyle.Flat
-        btnSave.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSave.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSave.ForeColor = Color.White
-        btnSave.Location = New Point(397, 306)
+        btnSave.Location = New Point(396, 300)
         btnSave.Margin = New Padding(3, 2, 3, 2)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(125, 28)
@@ -177,7 +177,7 @@ Partial Class Form5Renewal
         ' 
         Label4.AutoSize = True
         Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label4.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         Label4.Location = New Point(304, 224)
         Label4.Name = "Label4"
         Label4.Size = New Size(88, 15)
@@ -188,7 +188,7 @@ Partial Class Form5Renewal
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label3.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         Label3.Location = New Point(304, 183)
         Label3.Name = "Label3"
         Label3.Size = New Size(83, 15)
@@ -199,7 +199,7 @@ Partial Class Form5Renewal
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label2.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         Label2.Location = New Point(304, 142)
         Label2.Name = "Label2"
         Label2.Size = New Size(92, 15)
@@ -210,7 +210,7 @@ Partial Class Form5Renewal
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
         Label1.Location = New Point(304, 100)
         Label1.Name = "Label1"
         Label1.Size = New Size(97, 15)
@@ -250,7 +250,7 @@ Partial Class Form5Renewal
         btnSearch.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
         btnSearch.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
         btnSearch.FlatStyle = FlatStyle.Flat
-        btnSearch.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSearch.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSearch.ForeColor = Color.White
         btnSearch.Location = New Point(1194, 8)
         btnSearch.Margin = New Padding(3, 2, 3, 2)
@@ -264,7 +264,7 @@ Partial Class Form5Renewal
         ' 
         txtSearch.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         txtSearch.BackColor = SystemColors.ScrollBar
-        txtSearch.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtSearch.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtSearch.Location = New Point(969, 11)
         txtSearch.Name = "txtSearch"
         txtSearch.PlaceholderText = "  Search to renewal"
@@ -273,7 +273,7 @@ Partial Class Form5Renewal
         ' 
         ' Form5Renewal
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         BackColor = Color.RosyBrown

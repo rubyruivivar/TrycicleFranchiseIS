@@ -23,26 +23,25 @@ Partial Class Form1franchisee
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         tbfirstname = New TextBox()
-        tbmidname = New TextBox()
+        tbmiddlename = New TextBox()
         tblastname = New TextBox()
         tbphonenum = New TextBox()
         tbgender = New TextBox()
-        tbbirthdate = New TextBox()
-        tbbrgy = New TextBox()
-        tbmunicipality = New TextBox()
-        tbcity = New TextBox()
-        tbzipcode = New TextBox()
-        tbowner_id = New TextBox()
-        BtnAdd = New Button()
+        tbbarangay = New TextBox()
+        tblicensenum = New TextBox()
+        tbinsurance = New TextBox()
+        btnSave = New Button()
         LabelVehicle_Regulatory = New Label()
         Panel1 = New Panel()
         btnSearch = New Button()
         txtSearch = New TextBox()
-        cbxBarangay = New ComboBox()
+        cbxCivilStatus = New ComboBox()
         cbxMunicipality = New ComboBox()
-        cbxCityProvince = New ComboBox()
-        dtpDateIssued = New DateTimePicker()
+        cbxvalidID = New ComboBox()
+        dtpdateofbirth = New DateTimePicker()
         Label1 = New Label()
+        Label2 = New Label()
+        cbxzipcode = New ComboBox()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -55,14 +54,14 @@ Partial Class Form1franchisee
         tbfirstname.Size = New Size(218, 23)
         tbfirstname.TabIndex = 2
         ' 
-        ' tbmidname
+        ' tbmiddlename
         ' 
-        tbmidname.Location = New Point(60, 102)
-        tbmidname.Margin = New Padding(3, 2, 3, 2)
-        tbmidname.Name = "tbmidname"
-        tbmidname.PlaceholderText = "Middle Name (Optional)"
-        tbmidname.Size = New Size(218, 23)
-        tbmidname.TabIndex = 3
+        tbmiddlename.Location = New Point(60, 102)
+        tbmiddlename.Margin = New Padding(3, 2, 3, 2)
+        tbmiddlename.Name = "tbmiddlename"
+        tbmiddlename.PlaceholderText = "Middle Name (Optional)"
+        tbmiddlename.Size = New Size(218, 23)
+        tbmiddlename.TabIndex = 3
         ' 
         ' tblastname
         ' 
@@ -75,7 +74,7 @@ Partial Class Form1franchisee
         ' 
         ' tbphonenum
         ' 
-        tbphonenum.Location = New Point(60, 156)
+        tbphonenum.Location = New Point(60, 255)
         tbphonenum.Margin = New Padding(3, 2, 3, 2)
         tbphonenum.Name = "tbphonenum"
         tbphonenum.PlaceholderText = "Phone Number"
@@ -84,83 +83,56 @@ Partial Class Form1franchisee
         ' 
         ' tbgender
         ' 
-        tbgender.Location = New Point(60, 183)
+        tbgender.Location = New Point(60, 156)
         tbgender.Margin = New Padding(3, 2, 3, 2)
         tbgender.Name = "tbgender"
         tbgender.PlaceholderText = "Gender"
         tbgender.Size = New Size(218, 23)
         tbgender.TabIndex = 6
         ' 
-        ' tbbirthdate
+        ' tbbarangay
         ' 
-        tbbirthdate.Location = New Point(304, 385)
-        tbbirthdate.Margin = New Padding(3, 2, 3, 2)
-        tbbirthdate.Name = "tbbirthdate"
-        tbbirthdate.PlaceholderText = "Birth Date (MM/DD/YY)"
-        tbbirthdate.Size = New Size(218, 23)
-        tbbirthdate.TabIndex = 7
+        tbbarangay.Location = New Point(304, 142)
+        tbbarangay.Margin = New Padding(3, 2, 3, 2)
+        tbbarangay.Name = "tbbarangay"
+        tbbarangay.PlaceholderText = "Barangay"
+        tbbarangay.Size = New Size(218, 23)
+        tbbarangay.TabIndex = 8
         ' 
-        ' tbbrgy
+        ' tblicensenum
         ' 
-        tbbrgy.Location = New Point(303, 102)
-        tbbrgy.Margin = New Padding(3, 2, 3, 2)
-        tbbrgy.Name = "tbbrgy"
-        tbbrgy.PlaceholderText = "Baranggay"
-        tbbrgy.Size = New Size(218, 23)
-        tbbrgy.TabIndex = 8
+        tblicensenum.Location = New Point(304, 75)
+        tblicensenum.Margin = New Padding(3, 2, 3, 2)
+        tblicensenum.Name = "tblicensenum"
+        tblicensenum.PlaceholderText = "License Number"
+        tblicensenum.Size = New Size(218, 23)
+        tblicensenum.TabIndex = 9
         ' 
-        ' tbmunicipality
+        ' tbinsurance
         ' 
-        tbmunicipality.Location = New Point(69, 396)
-        tbmunicipality.Margin = New Padding(3, 2, 3, 2)
-        tbmunicipality.Name = "tbmunicipality"
-        tbmunicipality.PlaceholderText = "Municipality"
-        tbmunicipality.Size = New Size(218, 23)
-        tbmunicipality.TabIndex = 9
+        tbinsurance.Location = New Point(304, 102)
+        tbinsurance.Margin = New Padding(3, 2, 3, 2)
+        tbinsurance.Name = "tbinsurance"
+        tbinsurance.PlaceholderText = "Insurance Policy Number"
+        tbinsurance.Size = New Size(218, 23)
+        tbinsurance.TabIndex = 11
         ' 
-        ' tbcity
+        ' btnSave
         ' 
-        tbcity.Location = New Point(69, 423)
-        tbcity.Margin = New Padding(3, 2, 3, 2)
-        tbcity.Name = "tbcity"
-        tbcity.PlaceholderText = "City/Province"
-        tbcity.Size = New Size(218, 23)
-        tbcity.TabIndex = 10
-        ' 
-        ' tbzipcode
-        ' 
-        tbzipcode.Location = New Point(304, 274)
-        tbzipcode.Margin = New Padding(3, 2, 3, 2)
-        tbzipcode.Name = "tbzipcode"
-        tbzipcode.PlaceholderText = "Zip Code"
-        tbzipcode.Size = New Size(218, 23)
-        tbzipcode.TabIndex = 11
-        ' 
-        ' tbowner_id
-        ' 
-        tbowner_id.Location = New Point(303, 184)
-        tbowner_id.Margin = New Padding(3, 2, 3, 2)
-        tbowner_id.Name = "tbowner_id"
-        tbowner_id.PlaceholderText = "Owner ID"
-        tbowner_id.Size = New Size(218, 23)
-        tbowner_id.TabIndex = 12
-        ' 
-        ' BtnAdd
-        ' 
-        BtnAdd.BackColor = Color.CornflowerBlue
-        BtnAdd.FlatAppearance.BorderSize = 0
-        BtnAdd.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
-        BtnAdd.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
-        BtnAdd.FlatStyle = FlatStyle.Flat
-        BtnAdd.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        BtnAdd.ForeColor = Color.White
-        BtnAdd.Location = New Point(397, 306)
-        BtnAdd.Margin = New Padding(3, 2, 3, 2)
-        BtnAdd.Name = "BtnAdd"
-        BtnAdd.Size = New Size(125, 28)
-        BtnAdd.TabIndex = 29
-        BtnAdd.Text = "Save"
-        BtnAdd.UseVisualStyleBackColor = False
+        btnSave.BackColor = Color.CornflowerBlue
+        btnSave.FlatAppearance.BorderSize = 0
+        btnSave.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
+        btnSave.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
+        btnSave.FlatStyle = FlatStyle.Flat
+        btnSave.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSave.ForeColor = Color.White
+        btnSave.Location = New Point(397, 306)
+        btnSave.Margin = New Padding(3, 2, 3, 2)
+        btnSave.Name = "btnSave"
+        btnSave.Size = New Size(125, 28)
+        btnSave.TabIndex = 29
+        btnSave.Text = "Save"
+        btnSave.UseVisualStyleBackColor = False
         ' 
         ' LabelVehicle_Regulatory
         ' 
@@ -195,7 +167,7 @@ Partial Class Form1franchisee
         btnSearch.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
         btnSearch.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
         btnSearch.FlatStyle = FlatStyle.Flat
-        btnSearch.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSearch.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSearch.ForeColor = Color.White
         btnSearch.Location = New Point(1588, 8)
         btnSearch.Margin = New Padding(3, 2, 3, 2)
@@ -209,81 +181,100 @@ Partial Class Form1franchisee
         ' 
         txtSearch.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         txtSearch.BackColor = SystemColors.ScrollBar
-        txtSearch.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtSearch.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtSearch.Location = New Point(1363, 11)
         txtSearch.Name = "txtSearch"
         txtSearch.PlaceholderText = "  Search to renewal"
         txtSearch.Size = New Size(219, 23)
         txtSearch.TabIndex = 86
         ' 
-        ' cbxBarangay
+        ' cbxCivilStatus
         ' 
-        cbxBarangay.FormattingEnabled = True
-        cbxBarangay.Items.AddRange(New Object() {"approved", "denied", "pending"})
-        cbxBarangay.Location = New Point(60, 311)
-        cbxBarangay.Name = "cbxBarangay"
-        cbxBarangay.Size = New Size(218, 23)
-        cbxBarangay.TabIndex = 99
+        cbxCivilStatus.FormattingEnabled = True
+        cbxCivilStatus.Items.AddRange(New Object() {"Single", "Married", "Widowed"})
+        cbxCivilStatus.Location = New Point(60, 227)
+        cbxCivilStatus.Name = "cbxCivilStatus"
+        cbxCivilStatus.Size = New Size(218, 23)
+        cbxCivilStatus.TabIndex = 99
         ' 
         ' cbxMunicipality
         ' 
         cbxMunicipality.FormattingEnabled = True
-        cbxMunicipality.Items.AddRange(New Object() {"compliant", "non-compliant"})
-        cbxMunicipality.Location = New Point(303, 129)
+        cbxMunicipality.Items.AddRange(New Object() {"Basud", "Capalonga", "Daet", "Jose Panganiban", "Labo", "Mercedes", "Paracale", "San Lorenzo Ruiz", "San Vicente", "Santa Elena", "Talisay", "Vinzons"})
+        cbxMunicipality.Location = New Point(304, 169)
         cbxMunicipality.Name = "cbxMunicipality"
         cbxMunicipality.Size = New Size(218, 23)
         cbxMunicipality.TabIndex = 98
         ' 
-        ' cbxCityProvince
+        ' cbxvalidID
         ' 
-        cbxCityProvince.FormattingEnabled = True
-        cbxCityProvince.Items.AddRange(New Object() {"annual", "semi-annual"})
-        cbxCityProvince.Location = New Point(303, 156)
-        cbxCityProvince.Name = "cbxCityProvince"
-        cbxCityProvince.Size = New Size(218, 23)
-        cbxCityProvince.TabIndex = 97
+        cbxvalidID.FormattingEnabled = True
+        cbxvalidID.Items.AddRange(New Object() {"Camarines Norte"})
+        cbxvalidID.Location = New Point(305, 227)
+        cbxvalidID.Name = "cbxvalidID"
+        cbxvalidID.Size = New Size(218, 23)
+        cbxvalidID.TabIndex = 97
         ' 
-        ' dtpDateIssued
+        ' dtpdateofbirth
         ' 
-        dtpDateIssued.Location = New Point(60, 233)
-        dtpDateIssued.Name = "dtpDateIssued"
-        dtpDateIssued.Size = New Size(218, 23)
-        dtpDateIssued.TabIndex = 100
+        dtpdateofbirth.Location = New Point(60, 198)
+        dtpdateofbirth.Name = "dtpdateofbirth"
+        dtpdateofbirth.Size = New Size(218, 23)
+        dtpdateofbirth.TabIndex = 100
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
-        Label1.Location = New Point(303, 87)
+        Label1.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label1.Location = New Point(305, 127)
         Label1.Name = "Label1"
         Label1.Size = New Size(49, 15)
         Label1.TabIndex = 101
         Label1.Text = "Address"
         ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold)
+        Label2.Location = New Point(63, 181)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(55, 15)
+        Label2.TabIndex = 103
+        Label2.Text = "Birthdate"
+        ' 
+        ' cbxzipcode
+        ' 
+        cbxzipcode.FormattingEnabled = True
+        cbxzipcode.Items.AddRange(New Object() {"Camarines Norte"})
+        cbxzipcode.Location = New Point(304, 198)
+        cbxzipcode.Name = "cbxzipcode"
+        cbxzipcode.Size = New Size(218, 23)
+        cbxzipcode.TabIndex = 104
+        ' 
         ' Form1franchisee
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         BackColor = Color.RosyBrown
+        Controls.Add(cbxzipcode)
+        Controls.Add(Label2)
         Controls.Add(Label1)
-        Controls.Add(dtpDateIssued)
-        Controls.Add(cbxBarangay)
+        Controls.Add(dtpdateofbirth)
+        Controls.Add(cbxCivilStatus)
         Controls.Add(cbxMunicipality)
-        Controls.Add(cbxCityProvince)
+        Controls.Add(cbxvalidID)
         Controls.Add(Panel1)
-        Controls.Add(BtnAdd)
-        Controls.Add(tbowner_id)
-        Controls.Add(tbzipcode)
-        Controls.Add(tbcity)
-        Controls.Add(tbmunicipality)
-        Controls.Add(tbbrgy)
-        Controls.Add(tbbirthdate)
+        Controls.Add(btnSave)
+        Controls.Add(tbinsurance)
+        Controls.Add(tblicensenum)
+        Controls.Add(tbbarangay)
         Controls.Add(tbgender)
         Controls.Add(tbphonenum)
         Controls.Add(tblastname)
-        Controls.Add(tbmidname)
+        Controls.Add(tbmiddlename)
         Controls.Add(tbfirstname)
         Margin = New Padding(3, 2, 3, 2)
         Name = "Form1franchisee"
@@ -294,26 +285,24 @@ Partial Class Form1franchisee
         PerformLayout()
     End Sub
     Friend WithEvents tbfirstname As TextBox
-    Friend WithEvents tbmidname As TextBox
+    Friend WithEvents tbmiddlename As TextBox
     Friend WithEvents tblastname As TextBox
     Friend WithEvents tbphonenum As TextBox
     Friend WithEvents tbgender As TextBox
-    Friend WithEvents tbbirthdate As TextBox
-    Friend WithEvents tbbrgy As TextBox
-    Friend WithEvents tbmunicipality As TextBox
-    Friend WithEvents tbcity As TextBox
-    Friend WithEvents tbzipcode As TextBox
-    Friend WithEvents tbowner_id As TextBox
+    Friend WithEvents tbbarangay As TextBox
+    Friend WithEvents tblicensenum As TextBox
+    Friend WithEvents tbinsurance As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents BtnAdd As Button
+    Friend WithEvents btnSave As Button
     Friend WithEvents LabelVehicle_Regulatory As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnSearch As Button
     Friend WithEvents txtSearch As TextBox
-    Friend WithEvents cbxBarangay As ComboBox
+    Friend WithEvents cbxCivilStatus As ComboBox
     Friend WithEvents cbxMunicipality As ComboBox
-    Friend WithEvents cbxCityProvince As ComboBox
-    Friend WithEvents dtpDateIssued As DateTimePicker
+    Friend WithEvents cbxvalidID As ComboBox
+    Friend WithEvents dtpdateofbirth As DateTimePicker
     Friend WithEvents Label1 As Label
+    Friend WithEvents cbxzipcode As ComboBox
 
 End Class
