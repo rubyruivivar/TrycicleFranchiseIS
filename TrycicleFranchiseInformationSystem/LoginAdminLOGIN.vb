@@ -37,42 +37,36 @@ Public Class LoginAdminLOGIN
 
     ' Login button click event
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnContinue3.Click
-        '    ' Retrieve admin input
         Dim adminUsername As String = txtboxUserAd1.Text
         Dim adminPassword As String = txtboxPassUserad1.Text
 
-        ' Validate input fields
         If String.IsNullOrWhiteSpace(adminUsername) Or String.IsNullOrWhiteSpace(adminPassword) Then
             MessageBox.Show("Please enter your Username and Password.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
 
-        ' Database connection string
         Dim connString As String = "Server=127.0.0.1;Database=exampletest;Uid=root;Pwd=;"
-
-        ' Create a connection to the database
         Using conn As New MySqlConnection(connString)
             Try
                 conn.Open()
 
-                ' SQL query to validate admin credentials
-                Dim query As String = "SELECT COUNT(1) FROM sampletable2 WHERE username=@username AND password=@password"
-
-                ' Create command object
+                Dim query As String = "SELECT password FROM sampletable2 WHERE username=@username"
+                Dim EncryptionKey As String = "MAKV2SPBNI99212"
                 Using cmd As New MySqlCommand(query, conn)
-                    ' Add parameters to prevent SQL injection
                     cmd.Parameters.AddWithValue("@username", adminUsername)
-                    cmd.Parameters.AddWithValue("@password", adminPassword) ' Consider adding hashed passwords
+                    Dim encryptedPassword As String = Convert.ToString(cmd.ExecuteScalar())
 
-                    ' Execute the query
-                    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                    If Not String.IsNullOrEmpty(encryptedPassword) Then
+                        Dim decryptedPassword As String = Decrypt(encryptedPassword)
 
-                    If count = 1 Then
-                        MessageBox.Show("Admin Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        ' Open the admin dashboard
-                        Dim placeholderForm As New Placeholder
-                        placeholderForm.Show()
-                        Me.Hide() ' Hide the login form
+                        If adminPassword = decryptedPassword Then
+                            MessageBox.Show("Admin Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Dim Form1 As New Form1
+                            Form1.Show()
+                            Me.Hide()
+                        Else
+                            MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        End If
                     Else
                         MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
@@ -83,8 +77,8 @@ Public Class LoginAdminLOGIN
                 conn.Close()
             End Try
         End Using
-
     End Sub
+
 
     Public Shared RegistrationComplete As Boolean = False
 
@@ -100,8 +94,8 @@ Public Class LoginAdminLOGIN
 
     Private Sub lnklbl_Admin_Click(sender As Object, e As EventArgs) Handles lnklbl_Admin.Click
         ' Open the register form
-        Dim registerForm As New RegisterAdmin
-        registerForm.Show()
+        Dim RegisterAdmin As New RegisterAdmin
+        RegisterAdmin.Show()
         Me.Hide()
     End Sub
 

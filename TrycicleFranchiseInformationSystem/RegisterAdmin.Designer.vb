@@ -73,7 +73,7 @@ Partial Class RegisterAdmin
         txboxADMUS.Anchor = AnchorStyles.None
         txboxADMUS.Font = New Font("Segoe UI", 19.8000011F)
         txboxADMUS.ForeColor = SystemColors.AppWorkspace
-        txboxADMUS.Location = New Point(373, 190)
+        txboxADMUS.Location = New Point(373, 183)
         txboxADMUS.Name = "txboxADMUS"
         txboxADMUS.Size = New Size(557, 51)
         txboxADMUS.TabIndex = 9
@@ -84,7 +84,7 @@ Partial Class RegisterAdmin
         txtboxEmailAD.Anchor = AnchorStyles.None
         txtboxEmailAD.Font = New Font("Segoe UI", 19.8000011F)
         txtboxEmailAD.ForeColor = SystemColors.AppWorkspace
-        txtboxEmailAD.Location = New Point(373, 297)
+        txtboxEmailAD.Location = New Point(373, 300)
         txtboxEmailAD.Name = "txtboxEmailAD"
         txtboxEmailAD.Size = New Size(557, 51)
         txtboxEmailAD.TabIndex = 10
@@ -95,7 +95,7 @@ Partial Class RegisterAdmin
         txtboxPassADMUS.Anchor = AnchorStyles.None
         txtboxPassADMUS.Font = New Font("Segoe UI", 19.8000011F)
         txtboxPassADMUS.ForeColor = SystemColors.ActiveCaptionText
-        txtboxPassADMUS.Location = New Point(373, 419)
+        txtboxPassADMUS.Location = New Point(373, 423)
         txtboxPassADMUS.Name = "txtboxPassADMUS"
         txtboxPassADMUS.Size = New Size(382, 51)
         txtboxPassADMUS.TabIndex = 28
@@ -105,7 +105,7 @@ Partial Class RegisterAdmin
         txtboxCnfrmADMUS.Anchor = AnchorStyles.None
         txtboxCnfrmADMUS.Font = New Font("Segoe UI", 19.8000011F)
         txtboxCnfrmADMUS.ForeColor = SystemColors.ActiveCaptionText
-        txtboxCnfrmADMUS.Location = New Point(373, 526)
+        txtboxCnfrmADMUS.Location = New Point(373, 538)
         txtboxCnfrmADMUS.Name = "txtboxCnfrmADMUS"
         txtboxCnfrmADMUS.Size = New Size(382, 51)
         txtboxCnfrmADMUS.TabIndex = 29
@@ -117,7 +117,7 @@ Partial Class RegisterAdmin
         btnSignupADMSU.Cursor = Cursors.Hand
         btnSignupADMSU.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSignupADMSU.ForeColor = SystemColors.ButtonHighlight
-        btnSignupADMSU.Location = New Point(794, 507)
+        btnSignupADMSU.Location = New Point(794, 521)
         btnSignupADMSU.Name = "btnSignupADMSU"
         btnSignupADMSU.Size = New Size(210, 70)
         btnSignupADMSU.TabIndex = 30
@@ -129,7 +129,7 @@ Partial Class RegisterAdmin
         labelADMSU.Anchor = AnchorStyles.None
         labelADMSU.AutoSize = True
         labelADMSU.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold)
-        labelADMSU.Location = New Point(364, 137)
+        labelADMSU.Location = New Point(364, 127)
         labelADMSU.Name = "labelADMSU"
         labelADMSU.Size = New Size(196, 50)
         labelADMSU.TabIndex = 31
@@ -140,7 +140,7 @@ Partial Class RegisterAdmin
         lblEmailADMSU.Anchor = AnchorStyles.None
         lblEmailADMSU.AutoSize = True
         lblEmailADMSU.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold)
-        lblEmailADMSU.Location = New Point(364, 244)
+        lblEmailADMSU.Location = New Point(364, 242)
         lblEmailADMSU.Name = "lblEmailADMSU"
         lblEmailADMSU.Size = New Size(118, 50)
         lblEmailADMSU.TabIndex = 32
@@ -162,7 +162,7 @@ Partial Class RegisterAdmin
         lblCPassADMSU.Anchor = AnchorStyles.None
         lblCPassADMSU.AutoSize = True
         lblCPassADMSU.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold)
-        lblCPassADMSU.Location = New Point(364, 473)
+        lblCPassADMSU.Location = New Point(364, 480)
         lblCPassADMSU.Name = "lblCPassADMSU"
         lblCPassADMSU.Size = New Size(339, 50)
         lblCPassADMSU.TabIndex = 34
@@ -173,9 +173,9 @@ Partial Class RegisterAdmin
         btnTglPassAD.Anchor = AnchorStyles.None
         btnTglPassAD.BackColor = SystemColors.AppWorkspace
         btnTglPassAD.Font = New Font("Segoe UI Light", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnTglPassAD.Location = New Point(692, 389)
+        btnTglPassAD.Location = New Point(692, 379)
         btnTglPassAD.Name = "btnTglPassAD"
-        btnTglPassAD.Size = New Size(63, 27)
+        btnTglPassAD.Size = New Size(63, 32)
         btnTglPassAD.TabIndex = 35
         btnTglPassAD.Text = "Toggle"
         btnTglPassAD.UseVisualStyleBackColor = False

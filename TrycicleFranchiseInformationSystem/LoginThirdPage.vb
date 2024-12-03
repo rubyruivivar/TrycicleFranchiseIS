@@ -1,6 +1,6 @@
 ﻿Public Class LoginThirdPage
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnLogin1.Click
-        Dim form4 As New Form4()
+        Dim form4 As New Userlogin()
 
         form4.Show()
     End Sub

@@ -101,9 +101,9 @@ Partial Class LoginAdminLOGIN
         btnTogglePasswordAP.Anchor = AnchorStyles.None
         btnTogglePasswordAP.BackColor = SystemColors.AppWorkspace
         btnTogglePasswordAP.Font = New Font("Segoe UI Light", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnTogglePasswordAP.Location = New Point(688, 228)
+        btnTogglePasswordAP.Location = New Point(688, 222)
         btnTogglePasswordAP.Name = "btnTogglePasswordAP"
-        btnTogglePasswordAP.Size = New Size(63, 27)
+        btnTogglePasswordAP.Size = New Size(63, 32)
         btnTogglePasswordAP.TabIndex = 32
         btnTogglePasswordAP.Text = "Toggle"
         btnTogglePasswordAP.UseVisualStyleBackColor = False
@@ -113,7 +113,7 @@ Partial Class LoginAdminLOGIN
         lnklbl_Admin.ActiveLinkColor = Color.Khaki
         lnklbl_Admin.AutoSize = True
         lnklbl_Admin.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lnklbl_Admin.Location = New Point(520, 315)
+        lnklbl_Admin.Location = New Point(520, 322)
         lnklbl_Admin.Name = "lnklbl_Admin"
         lnklbl_Admin.Size = New Size(231, 31)
         lnklbl_Admin.TabIndex = 4
@@ -124,7 +124,7 @@ Partial Class LoginAdminLOGIN
         ' 
         labelPassUserAd1.AutoSize = True
         labelPassUserAd1.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        labelPassUserAd1.Location = New Point(184, 208)
+        labelPassUserAd1.Location = New Point(184, 203)
         labelPassUserAd1.Name = "labelPassUserAd1"
         labelPassUserAd1.Size = New Size(187, 50)
         labelPassUserAd1.TabIndex = 3
@@ -144,7 +144,7 @@ Partial Class LoginAdminLOGIN
         ' 
         labelUserAd1.AutoSize = True
         labelUserAd1.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        labelUserAd1.Location = New Point(184, 76)
+        labelUserAd1.Location = New Point(184, 72)
         labelUserAd1.Name = "labelUserAd1"
         labelUserAd1.Size = New Size(196, 50)
         labelUserAd1.TabIndex = 1

@@ -71,7 +71,7 @@ Partial Class LoginThirdPage
         labelWelcome1.Anchor = AnchorStyles.None
         labelWelcome1.AutoSize = True
         labelWelcome1.Font = New Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        labelWelcome1.Location = New Point(692, 168)
+        labelWelcome1.Location = New Point(692, 164)
         labelWelcome1.Name = "labelWelcome1"
         labelWelcome1.Size = New Size(463, 106)
         labelWelcome1.TabIndex = 4

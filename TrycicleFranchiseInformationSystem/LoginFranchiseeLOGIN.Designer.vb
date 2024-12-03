@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form4
+Partial Class Userlogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -86,9 +86,9 @@ Partial Class Form4
         btnTogglePasswordFS.Anchor = AnchorStyles.None
         btnTogglePasswordFS.BackColor = SystemColors.AppWorkspace
         btnTogglePasswordFS.Font = New Font("Segoe UI Light", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnTogglePasswordFS.Location = New Point(688, 228)
+        btnTogglePasswordFS.Location = New Point(688, 221)
         btnTogglePasswordFS.Name = "btnTogglePasswordFS"
-        btnTogglePasswordFS.Size = New Size(63, 27)
+        btnTogglePasswordFS.Size = New Size(63, 32)
         btnTogglePasswordFS.TabIndex = 32
         btnTogglePasswordFS.Text = "Toggle"
         btnTogglePasswordFS.UseVisualStyleBackColor = False
@@ -97,7 +97,7 @@ Partial Class Form4
         ' 
         labelPassFID1.AutoSize = True
         labelPassFID1.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        labelPassFID1.Location = New Point(184, 208)
+        labelPassFID1.Location = New Point(184, 204)
         labelPassFID1.Name = "labelPassFID1"
         labelPassFID1.Size = New Size(187, 50)
         labelPassFID1.TabIndex = 3
@@ -117,7 +117,7 @@ Partial Class Form4
         ' 
         labelFranchiseeID1.AutoSize = True
         labelFranchiseeID1.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        labelFranchiseeID1.Location = New Point(184, 76)
+        labelFranchiseeID1.Location = New Point(184, 71)
         labelFranchiseeID1.Name = "labelFranchiseeID1"
         labelFranchiseeID1.Size = New Size(254, 50)
         labelFranchiseeID1.TabIndex = 1
@@ -148,7 +148,7 @@ Partial Class Form4
         btnContinue2.Text = "CONTINUE"
         btnContinue2.UseVisualStyleBackColor = False
         ' 
-        ' Form4
+        ' Userlogin
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
@@ -157,7 +157,7 @@ Partial Class Form4
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Name = "Form4"
+        Name = "Userlogin"
         StartPosition = FormStartPosition.CenterScreen
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)

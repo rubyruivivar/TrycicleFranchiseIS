@@ -64,7 +64,7 @@ Partial Class LoginFranchiseeSU
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Century Gothic", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.White
         Label3.Location = New Point(46, 23)
         Label3.Name = "Label3"
@@ -86,7 +86,7 @@ Partial Class LoginFranchiseeSU
         labelFIDSI.Anchor = AnchorStyles.None
         labelFIDSI.AutoSize = True
         labelFIDSI.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold)
-        labelFIDSI.Location = New Point(95, 69)
+        labelFIDSI.Location = New Point(95, 65)
         labelFIDSI.Name = "labelFIDSI"
         labelFIDSI.Size = New Size(254, 50)
         labelFIDSI.TabIndex = 7
@@ -97,7 +97,7 @@ Partial Class LoginFranchiseeSU
         labelNameSI.Anchor = AnchorStyles.None
         labelNameSI.AutoSize = True
         labelNameSI.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold)
-        labelNameSI.Location = New Point(95, 190)
+        labelNameSI.Location = New Point(95, 188)
         labelNameSI.Name = "labelNameSI"
         labelNameSI.Size = New Size(125, 50)
         labelNameSI.TabIndex = 9
@@ -141,7 +141,7 @@ Partial Class LoginFranchiseeSU
         labelPNUMSI.Anchor = AnchorStyles.None
         labelPNUMSI.AutoSize = True
         labelPNUMSI.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold)
-        labelPNUMSI.Location = New Point(690, 69)
+        labelPNUMSI.Location = New Point(690, 65)
         labelPNUMSI.Name = "labelPNUMSI"
         labelPNUMSI.Size = New Size(285, 50)
         labelPNUMSI.TabIndex = 13
@@ -185,7 +185,7 @@ Partial Class LoginFranchiseeSU
         labelAddressSI.Anchor = AnchorStyles.None
         labelAddressSI.AutoSize = True
         labelAddressSI.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold)
-        labelAddressSI.Location = New Point(690, 190)
+        labelAddressSI.Location = New Point(690, 188)
         labelAddressSI.Name = "labelAddressSI"
         labelAddressSI.Size = New Size(161, 50)
         labelAddressSI.TabIndex = 15
@@ -240,7 +240,7 @@ Partial Class LoginFranchiseeSU
         btnSignupSi.Anchor = AnchorStyles.None
         btnSignupSi.BackColor = SystemColors.ActiveCaptionText
         btnSignupSi.Cursor = Cursors.Hand
-        btnSignupSi.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSignupSi.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSignupSi.ForeColor = SystemColors.ButtonHighlight
         btnSignupSi.Location = New Point(1049, 584)
         btnSignupSi.Name = "btnSignupSi"
@@ -315,10 +315,10 @@ Partial Class LoginFranchiseeSU
         ' 
         btnTogglePassword.Anchor = AnchorStyles.None
         btnTogglePassword.BackColor = SystemColors.AppWorkspace
-        btnTogglePassword.Font = New Font("Segoe UI Light", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnTogglePassword.Location = New Point(422, 571)
+        btnTogglePassword.Font = New Font("Segoe UI Light", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnTogglePassword.Location = New Point(422, 566)
         btnTogglePassword.Name = "btnTogglePassword"
-        btnTogglePassword.Size = New Size(63, 27)
+        btnTogglePassword.Size = New Size(63, 32)
         btnTogglePassword.TabIndex = 31
         btnTogglePassword.Text = "Toggle"
         btnTogglePassword.UseVisualStyleBackColor = False
@@ -328,12 +328,13 @@ Partial Class LoginFranchiseeSU
         mtxboxFID.Anchor = AnchorStyles.None
         mtxboxFID.Cursor = Cursors.IBeam
         mtxboxFID.Font = New Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        mtxboxFID.ForeColor = SystemColors.AppWorkspace
         mtxboxFID.Location = New Point(103, 122)
-        mtxboxFID.Mask = "00-000"
         mtxboxFID.Name = "mtxboxFID"
         mtxboxFID.PromptChar = "X"c
         mtxboxFID.Size = New Size(557, 51)
         mtxboxFID.TabIndex = 32
+        mtxboxFID.Text = "Franchisee ID"
         ' 
         ' LoginFranchiseeSU
         ' 
