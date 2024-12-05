@@ -4,6 +4,22 @@ Imports MySql.Data.MySqlClient
 
 Public Class LoginFranchiseeSU
 
+
+    Private Sub mtxboxFID_Enter(sender As Object, e As EventArgs) Handles mtxboxFID.Enter
+        If mtxboxFID.Text = "Franchisee ID" Then
+
+            mtxboxFID.Text = ""
+            mtxboxFID.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub mtxboxFID_Leave(sender As Object, e As EventArgs) Handles mtxboxFID.Leave
+        If txboxPNUMSI.Text = "" Then
+
+            mtxboxFID.Text = "Franchisee ID"
+            mtxboxFID.ForeColor = Color.Silver
+        End If
+    End Sub
     Private Sub TxboxPNUMSI_Enter(sender As Object, e As EventArgs) Handles txboxPNUMSI.Enter
         If txboxPNUMSI.Text = "09XXXXXXXXX" Then
 
@@ -220,33 +236,18 @@ Public Class LoginFranchiseeSU
 
     Private Const PasswordMinLength As Integer = 8
     Private Const PasswordComplexityPattern As String = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
-    Private Sub mtxboxFID_Leave(sender As Object, e As EventArgs) Handles mtxboxFID.Leave
-        Dim pattern As String = "^\d{2}-\d{3}$"  ' Regular expression pattern for 00-000
-        Dim input As String = mtxboxFID.Text
 
-        If Not System.Text.RegularExpressions.Regex.IsMatch(input, pattern) Then
-            MessageBox.Show("Please enter the Franchisee ID in the format 00-000", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            mtxboxFID.Focus()
-            mtxboxFID.SelectAll()
-        End If
-    End Sub
 
-    ' Button Click to Submit
+
     Private Function AreAllFieldsValid() As Boolean
 
         Dim pattern As String = "^\d{2}-\d{3}$"
-        Dim inputFID As String = mtxboxFID.Text
-
-        ' Check if Franchisee ID matches the pattern
-        If Not System.Text.RegularExpressions.Regex.IsMatch(inputFID, pattern) Then
-            MessageBox.Show("Please enter the Franchisee ID in the format 00-000", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            mtxboxFID.Focus()
-            mtxboxFID.SelectAll()
-            Return False
-        End If
 
         ' Check if each required field is filled out
-        If txboxPNUMSI.Text = "" OrElse txboxPNUMSI.Text = "09XXXXXXXXX" Then
+        If mtxboxFID.Text = "" OrElse txboxPNUMSI.Text = "Franchisee ID" Then
+            MessageBox.Show("Please enter a Franchisee ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return False
+        ElseIf txboxPNUMSI.Text = "" OrElse txboxPNUMSI.Text = "09XXXXXXXXX" Then
             MessageBox.Show("Please enter a valid phone number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return False
         ElseIf txboxFNAMSI.Text = "" OrElse txboxFNAMSI.Text = "First Name" Then
@@ -294,11 +295,14 @@ Public Class LoginFranchiseeSU
                 Try
                     connection.Open()
 
+                    ' Encrypt the password before storing it
+                    Dim encryptedPassword As String = Encrypt(txtboxPassSI.Text)
+
                     ' Insert data into the database
                     Dim query As String = "INSERT INTO samplelatest (franchiseeID, PhoneNumber, firstname, middlename, lastname, barangay, " &
-"municipality, province, zipcode, birthdate, gender, password) " &
-"VALUES (@franchiseeID, @PhoneNumber, @firstname, @middlename, @lastname, @barangay, " &
-"@municipality, @province, @zipcode, @birthdate, @gender, @password)"
+                                      "municipality, province, zipcode, birthdate, gender, password) " &
+                                      "VALUES (@franchiseeID, @PhoneNumber, @firstname, @middlename, @lastname, @barangay, " &
+                                      "@municipality, @province, @zipcode, @birthdate, @gender, @password)"
 
                     Using cmd As New MySqlCommand(query, connection)
                         ' Add parameters
@@ -313,7 +317,7 @@ Public Class LoginFranchiseeSU
                         cmd.Parameters.AddWithValue("@zipcode", txtbxZipCod.Text)
                         cmd.Parameters.AddWithValue("@birthdate", dtmepickerDOBSI.Value.ToString("yyyy-MM-dd"))
                         cmd.Parameters.AddWithValue("@gender", combbxGender.Text)
-                        cmd.Parameters.AddWithValue("@password", txtboxPassSI.Text) ' Consider hashing the password
+                        cmd.Parameters.AddWithValue("@password", encryptedPassword) ' Save encrypted password
 
                         ' Execute the command
                         cmd.ExecuteNonQuery()
@@ -327,11 +331,12 @@ Public Class LoginFranchiseeSU
             End Using
 
             ' Proceed to Placeholder form if sign-up is successful
-            Dim placeholderForm As New Placeholder
-            placeholderForm.Show()
+            Dim Userlogin As New Userlogin
+            Userlogin.Show()
             Me.Hide()
         End If
     End Sub
+
     ' Function to validate password length and complexity
     Private Function IsPasswordValid(password As String) As Boolean
         ' Check if the password matches the regex pattern (minimum 8 characters, at least 1 lowercase, 1 uppercase, 1 number, 1 special character)

@@ -59,8 +59,8 @@ Public Class RegisterAdmin
     Private Sub btnSignupADMSU_Click(sender As Object, e As EventArgs) Handles btnSignupADMSU.Click
         If AreAllFieldsValid() Then
             If RegisterAdminToDatabase() Then
-                Dim placeholderForm As New Placeholder
-                placeholderForm.Show()
+                Dim LoginAdminHome As New LoginAdminHome
+                LoginAdminHome.Show()
                 Me.Hide()
             End If
         End If
@@ -72,12 +72,14 @@ Public Class RegisterAdmin
             conn.Open()
 
             Dim query As String = "INSERT INTO sampletable2 (username, emailaddress, password) VALUES (@Username, @Email, @Password)"
-            Dim key As String = "YourEncryptionKeyHere"
-
+            Dim EncryptionKey As String = "MAKV2SPBNI99212"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@Username", txboxADMUS.Text)
                 cmd.Parameters.AddWithValue("@Email", txtboxEmailAD.Text)
-                cmd.Parameters.AddWithValue("@Password", txtboxPassADMUS.Text)
+
+                ' Encrypt the password before storing it
+                Dim encryptedPassword As String = Encrypt(txtboxPassADMUS.Text)
+                cmd.Parameters.AddWithValue("@Password", encryptedPassword)
 
                 cmd.ExecuteNonQuery()
                 MessageBox.Show("Admin registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -90,6 +92,7 @@ Public Class RegisterAdmin
             conn.Close()
         End Try
     End Function
+
 
     Private Function IsPasswordValid(password As String) As Boolean
         Dim passwordRegex As New Regex(PasswordComplexityPattern)

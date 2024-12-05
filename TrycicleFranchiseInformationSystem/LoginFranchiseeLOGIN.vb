@@ -1,8 +1,6 @@
-﻿
+﻿Imports MySql.Data.MySqlClient
 
-Imports MySql.Data.MySqlClient
-
-Public Class Form4
+Public Class Userlogin
 
     'Dim connString As String = "Server=localhost;Database=your_database;Uid=your_username;Pwd=your_password;"
 
@@ -39,10 +37,10 @@ Public Class Form4
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnContinue2.Click
         ' Retrieve user input
         Dim franchiseeId As String = txtboxFranchiseeID1.Text
-        Dim password As String = txtboxPassFID1.Text
+        Dim enteredPassword As String = txtboxPassFID1.Text
 
         ' Validate input fields
-        If String.IsNullOrWhiteSpace(franchiseeId) Or String.IsNullOrWhiteSpace(password) Then
+        If String.IsNullOrWhiteSpace(franchiseeId) Or String.IsNullOrWhiteSpace(enteredPassword) Then
             MessageBox.Show("Please enter your Franchisee ID and Password.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
@@ -55,23 +53,31 @@ Public Class Form4
             Try
                 conn.Open()
 
-                ' SQL query to validate credentials
-                Dim query As String = "SELECT COUNT(1) FROM samplelatest WHERE franchiseeID=@id AND password=@pass"
+                ' SQL query to retrieve the encrypted password
+                Dim query As String = "SELECT password FROM samplelatest WHERE franchiseeID=@id"
 
                 ' Create command object
                 Using cmd As New MySqlCommand(query, conn)
                     ' Add parameters to prevent SQL injection
                     cmd.Parameters.AddWithValue("@id", franchiseeId)
-                    cmd.Parameters.AddWithValue("@pass", password) ' Consider adding hashed passwords
 
-                    ' Execute the query
-                    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                    ' Retrieve encrypted password
+                    Dim encryptedPassword As String = Convert.ToString(cmd.ExecuteScalar())
 
-                    If count = 1 Then
+                    If String.IsNullOrEmpty(encryptedPassword) Then
+                        MessageBox.Show("Invalid Franchisee ID or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Return
+                    End If
+
+                    ' Decrypt the password
+                    Dim decryptedPassword As String = Decrypt(encryptedPassword)
+
+                    ' Compare with entered password
+                    If decryptedPassword = enteredPassword Then
                         MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         ' Open the next form
-                        Dim placeholderForm As New Placeholder
-                        placeholderForm.Show()
+                        Dim Form1 As New Form1
+                        Form1.Show()
                         Me.Hide() ' Hide the login form
                     Else
                         MessageBox.Show("Invalid Franchisee ID or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -84,6 +90,7 @@ Public Class Form4
             End Try
         End Using
     End Sub
+
 
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtboxPassFID1.PasswordChar = "*"c

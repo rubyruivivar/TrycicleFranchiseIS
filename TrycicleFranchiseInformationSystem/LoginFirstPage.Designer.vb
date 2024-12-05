@@ -118,7 +118,7 @@ Partial Class LoginFirstPage
         labelSystem1.AutoSize = True
         labelSystem1.Font = New Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         labelSystem1.ForeColor = Color.FromArgb(CByte(125), CByte(49), CByte(173))
-        labelSystem1.Location = New Point(712, 404)
+        labelSystem1.Location = New Point(712, 407)
         labelSystem1.Name = "labelSystem1"
         labelSystem1.Size = New Size(262, 81)
         labelSystem1.TabIndex = 7
