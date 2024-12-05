@@ -6,6 +6,7 @@ Public Class Form1franchisee
         Me.Dock = DockStyle.Fill
 
         ' Set placeholders for all ComboBoxes
+        SetComboBoxPlaceholder(cbxgender, "Gender")
         SetComboBoxPlaceholder(cbxCivilStatus, "Civil Status")
         SetComboBoxPlaceholder(cbxMunicipality, "Municipality")
         SetComboBoxPlaceholder(cbxvalidID, "Valid ID")
@@ -13,7 +14,7 @@ Public Class Form1franchisee
 
     ' ComboBox Placeholder Logic
     Private Sub ComboBox_GotFocus(sender As Object, e As EventArgs) _
-        Handles cbxCivilStatus.GotFocus, cbxMunicipality.GotFocus, cbxvalidid.GotFocus
+        Handles cbxgender.GotFocus, cbxCivilStatus.GotFocus, cbxMunicipality.GotFocus, cbxvalidID.GotFocus
 
         Dim comboBox As ComboBox = CType(sender, ComboBox)
 
@@ -25,13 +26,15 @@ Public Class Form1franchisee
     End Sub
 
     Private Sub ComboBox_LostFocus(sender As Object, e As EventArgs) _
-        Handles cbxCivilStatus.LostFocus, cbxMunicipality.LostFocus, cbxvalidID.LostFocus
+        Handles cbxgender.LostFocus, cbxCivilStatus.LostFocus, cbxMunicipality.LostFocus, cbxvalidID.LostFocus
 
         Dim comboBox As ComboBox = CType(sender, ComboBox)
 
         ' Restore placeholder text if no value is selected
         If String.IsNullOrWhiteSpace(comboBox.Text) Then
             Select Case comboBox.Name
+                Case "cbxgender"
+                    SetComboBoxPlaceholder(comboBox, "Gender")
                 Case "cbxCivilStatus"
                     SetComboBoxPlaceholder(comboBox, "Civil Status")
                 Case "cbxMunicipality"
@@ -51,7 +54,7 @@ Public Class Form1franchisee
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
             ' Validation: Check if the required fields are not empty
-            If cbxCivilStatus.Text = "Civil Status" OrElse cbxMunicipality.Text = "Municipality" OrElse cbxvalidID.Text = "Valid ID" Then
+            If cbxgender.Text = "Gender" OrElse cbxCivilStatus.Text = "Civil Status" OrElse cbxMunicipality.Text = "Municipality" OrElse cbxvalidID.Text = "Valid ID" Then
                 MsgBox("Please fill in all required fields.", MsgBoxStyle.Exclamation)
                 Exit Sub
             End If
@@ -64,11 +67,6 @@ Public Class Form1franchisee
             If tblastname.Text.Trim = Nothing Then
                 MsgBox("Enter Last Name.")
                 tblastname.Focus()
-                Exit Sub
-            End If
-            If tbgender.Text.Trim = Nothing Then
-                MsgBox("Enter Gender.")
-                tbgender.Focus()
                 Exit Sub
             End If
             If tbphonenum.Text.Trim = Nothing Then
@@ -99,12 +97,12 @@ Public Class Form1franchisee
 
             ' Construct the SQL query to insert the new renewal record
             Dim query As String = String.Format("INSERT INTO franchiseedatabase " &
-                                                "(first_name, middle_name, last_name, gender, date_of_birth, phone_number, barangay, municipality, zip_code, valid_id, license_number, insurance_policy_number, civil_status) " &
-                                                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}')",
+                                                "(first_name, middle_name, last_name, gender, date_of_birth, phone_number, barangay, municipality, valid_id, license_number, insurance_policy_number, civil_status) " &
+                                                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}')",
                                                 tbfirstname.Text.Trim, tbmiddlename.Text.Trim, tblastname.Text.Trim,
-                                                tbgender.Text.Trim, dtpdateofbirth.Value.ToString("yyyy-MM-dd"), tbphonenum.Text.Trim,
-                                                tbbarangay.Text.Trim, cbxMunicipality.Text.Trim, cbxzipcode.Text.Trim,
-                                                cbxvalidID.Text.Trim, tblicensenum.Text.Trim, tbinsurance.Text.Trim, cbxCivilStatus.Text.Trim)
+                                                cbxgender.Text.Trim, dtpdateofbirth.Value.ToString("yyyy-MM-dd"), tbphonenum.Text.Trim,
+                                                tbbarangay.Text.Trim, cbxMunicipality.Text.Trim, cbxvalidID.Text.Trim,
+                                                tblicensenum.Text.Trim, tbinsurance.Text.Trim, cbxCivilStatus.Text.Trim)
 
             ' Execute the query using the module method
             ' RenewalDatabaseModule.ExecuteNonQuery(query)
@@ -125,20 +123,20 @@ Public Class Form1franchisee
         tbfirstname.Clear()
         tbmiddlename.Clear()
         tblastname.Clear()
-        tbgender.Clear()
         tbphonenum.Clear()
         tbbarangay.Clear()
         tblicensenum.Clear()
         tbinsurance.Clear()
 
+        cbxgender.Text = "Gender"
         cbxCivilStatus.Text = "Civil Status"
         cbxMunicipality.Text = "Municipality"
         cbxvalidID.Text = "Valid ID"
-        cbxzipcode.Text = "Zip Code"
+        cbxgender.ForeColor = Color.Gray
         cbxCivilStatus.ForeColor = Color.Gray
         cbxMunicipality.ForeColor = Color.Gray
         cbxvalidID.ForeColor = Color.Gray
-        cbxzipcode.ForeColor = Color.Gray
+
 
 
     End Sub

@@ -87,7 +87,7 @@ Partial Class RenewalData
         btnDelete.FlatStyle = FlatStyle.Flat
         btnDelete.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnDelete.ForeColor = Color.White
-        btnDelete.Location = New Point(268, 302)
+        btnDelete.Location = New Point(277, 302)
         btnDelete.Margin = New Padding(3, 2, 3, 2)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(125, 28)
@@ -134,28 +134,28 @@ Partial Class RenewalData
         ' 
         ' dtpExpirationDate
         ' 
-        dtpExpirationDate.Location = New Point(268, 240)
+        dtpExpirationDate.Location = New Point(277, 239)
         dtpExpirationDate.Name = "dtpExpirationDate"
         dtpExpirationDate.Size = New Size(218, 23)
         dtpExpirationDate.TabIndex = 78
         ' 
         ' dtpApprovalDate
         ' 
-        dtpApprovalDate.Location = New Point(268, 158)
+        dtpApprovalDate.Location = New Point(277, 157)
         dtpApprovalDate.Name = "dtpApprovalDate"
         dtpApprovalDate.Size = New Size(218, 23)
         dtpApprovalDate.TabIndex = 77
         ' 
         ' dtpProcessingDate
         ' 
-        dtpProcessingDate.Location = New Point(268, 199)
+        dtpProcessingDate.Location = New Point(277, 198)
         dtpProcessingDate.Name = "dtpProcessingDate"
         dtpProcessingDate.Size = New Size(218, 23)
         dtpProcessingDate.TabIndex = 76
         ' 
         ' dtpSubmissionDate
         ' 
-        dtpSubmissionDate.Location = New Point(268, 116)
+        dtpSubmissionDate.Location = New Point(277, 115)
         dtpSubmissionDate.Name = "dtpSubmissionDate"
         dtpSubmissionDate.Size = New Size(218, 23)
         dtpSubmissionDate.TabIndex = 75
@@ -171,7 +171,7 @@ Partial Class RenewalData
         ' 
         ' tbAuthorityID
         ' 
-        tbAuthorityID.Location = New Point(268, 75)
+        tbAuthorityID.Location = New Point(277, 75)
         tbAuthorityID.Margin = New Padding(3, 2, 3, 2)
         tbAuthorityID.Name = "tbAuthorityID"
         tbAuthorityID.PlaceholderText = "Authority ID"
@@ -219,7 +219,7 @@ Partial Class RenewalData
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
-        Label1.Location = New Point(268, 101)
+        Label1.Location = New Point(277, 100)
         Label1.Name = "Label1"
         Label1.Size = New Size(97, 15)
         Label1.TabIndex = 82
@@ -230,7 +230,7 @@ Partial Class RenewalData
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
-        Label2.Location = New Point(268, 143)
+        Label2.Location = New Point(277, 142)
         Label2.Name = "Label2"
         Label2.Size = New Size(92, 15)
         Label2.TabIndex = 83
@@ -241,7 +241,7 @@ Partial Class RenewalData
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
-        Label3.Location = New Point(268, 184)
+        Label3.Location = New Point(277, 183)
         Label3.Name = "Label3"
         Label3.Size = New Size(83, 15)
         Label3.TabIndex = 84
@@ -252,7 +252,7 @@ Partial Class RenewalData
         Label4.AutoSize = True
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold)
-        Label4.Location = New Point(268, 225)
+        Label4.Location = New Point(277, 224)
         Label4.Name = "Label4"
         Label4.Size = New Size(88, 15)
         Label4.TabIndex = 85

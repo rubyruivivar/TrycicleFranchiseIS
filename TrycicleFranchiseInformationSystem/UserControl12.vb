@@ -20,6 +20,7 @@
 
     ' Load Event
     Private Sub RenewalData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Me.Dock = DockStyle.Fill
 
         ' Set placeholders for all ComboBoxes
@@ -219,9 +220,9 @@
     Private Sub dgvRenewal_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRenewal.CellDoubleClick
         Try
             Dim row As DataGridViewRow = dgvRenewal.Rows(e.RowIndex)
-            tbFranchiseeID.Tag = row.Cells("Renewal ID").Value
-            tbFranchiseeID.Text = row.Cells("Franchisee ID").Value.ToString()
+            tbFranchiseID.Tag = row.Cells("Renewal ID").Value
             tbFranchiseID.Text = row.Cells("Franchise ID").Value.ToString()
+            tbFranchiseeID.Text = row.Cells("Franchisee ID").Value.ToString()
             tbRenewalNumber.Text = row.Cells("Renewal Number").Value.ToString()
             tbRenewalFee.Text = row.Cells("Renewal Fee").Value.ToString()
             tbPenaltyFee.Text = row.Cells("Penalty Fee").Value.ToString()
@@ -255,4 +256,7 @@
         dtpExpirationDate.Value = DateTime.Now
     End Sub
 
+    Private Sub dtpSubmissionDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpSubmissionDate.ValueChanged
+
+    End Sub
 End Class
